@@ -1,0 +1,2409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1288</width>
+    <height>552</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Rota System v2</string>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <property name="dockOptions">
+   <set>QMainWindow::AllowTabbedDocks|QMainWindow::AnimatedDocks</set>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="horizontalSpacing">
+     <number>6</number>
+    </property>
+    <property name="verticalSpacing">
+     <number>2</number>
+    </property>
+    <item row="5" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="tabPosition">
+         <enum>QTabWidget::West</enum>
+        </property>
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <property name="documentMode">
+         <bool>false</bool>
+        </property>
+        <widget class="QWidget" name="rotaTab">
+         <attribute name="title">
+          <string>Rota</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_5">
+          <item row="4" column="0">
+           <widget class="QTableWidget" name="tableWidget">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOn</enum>
+            </property>
+            <property name="horizontalScrollBarPolicy">
+             <enum>Qt::ScrollBarAsNeeded</enum>
+            </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
+            <property name="dragDropOverwriteMode">
+             <bool>false</bool>
+            </property>
+            <property name="alternatingRowColors">
+             <bool>true</bool>
+            </property>
+            <property name="selectionMode">
+             <enum>QAbstractItemView::ExtendedSelection</enum>
+            </property>
+            <property name="selectionBehavior">
+             <enum>QAbstractItemView::SelectItems</enum>
+            </property>
+            <property name="textElideMode">
+             <enum>Qt::ElideMiddle</enum>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+            <property name="columnCount">
+             <number>8</number>
+            </property>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>150</number>
+            </attribute>
+            <attribute name="horizontalHeaderHighlightSections">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="horizontalHeaderMinimumSectionSize">
+             <number>150</number>
+            </attribute>
+            <attribute name="horizontalHeaderStretchLastSection">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderCascadingSectionResizes">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderDefaultSectionSize">
+             <number>30</number>
+            </attribute>
+            <attribute name="verticalHeaderHighlightSections">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderMinimumSectionSize">
+             <number>21</number>
+            </attribute>
+            <attribute name="verticalHeaderStretchLastSection">
+             <bool>false</bool>
+            </attribute>
+            <column>
+             <property name="text">
+              <string>Name</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Monday</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Tuesday</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Wednesday</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Thursday</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Friday</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Saturday</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Sunday</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QTableWidget" name="coverHeaderTable">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Sunken</enum>
+            </property>
+            <property name="lineWidth">
+             <number>0</number>
+            </property>
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOn</enum>
+            </property>
+            <property name="horizontalScrollBarPolicy">
+             <enum>Qt::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
+            <property name="tabKeyNavigation">
+             <bool>false</bool>
+            </property>
+            <property name="dragDropOverwriteMode">
+             <bool>false</bool>
+            </property>
+            <property name="columnCount">
+             <number>8</number>
+            </property>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>150</number>
+            </attribute>
+            <attribute name="horizontalHeaderMinimumSectionSize">
+             <number>150</number>
+            </attribute>
+            <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderCascadingSectionResizes">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderDefaultSectionSize">
+             <number>0</number>
+            </attribute>
+            <column>
+             <property name="text">
+              <string>Cover Totals</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Mon Cov</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Tue Cov</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Wed Cov</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Thur Cov</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Fri Cov</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>New Column</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Sun Cov</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <layout class="QGridLayout" name="gridLayout_3" rowstretch="0">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMaximumSize</enum>
+            </property>
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <item row="0" column="15">
+             <widget class="QPushButton" name="delShiftBUT">
+              <property name="minimumSize">
+               <size>
+                <width>80</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>121</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Delete Shifts</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="11">
+             <spacer name="horizontalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="0" column="20">
+             <widget class="Line" name="line">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="8">
+             <widget class="QComboBox" name="departmentFilterCombo"/>
+            </item>
+            <item row="0" column="17">
+             <widget class="Line" name="line_2">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="6">
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>Filter by Department</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="7">
+             <spacer name="horizontalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>10</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="0" column="10">
+             <widget class="Line" name="line_10">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="16">
+             <widget class="QPushButton" name="deleteWeekBUT">
+              <property name="text">
+               <string>Delete Week</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="14">
+             <widget class="Line" name="line_3">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="19">
+             <widget class="QPushButton" name="AddEmpBUT">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>27</height>
+               </size>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
+              <property name="text">
+               <string>Add Employee</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="13">
+             <widget class="QPushButton" name="AutoPopulate">
+              <property name="text">
+               <string>Auto Populate</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="9">
+             <spacer name="horizontalSpacer_12">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>5</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="0" column="18">
+             <widget class="QPushButton" name="RemoveEmpBUT">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>27</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Remove Employee</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="5">
+             <spacer name="horizontalSpacer_11">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>5</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="0" column="12">
+             <widget class="Line" name="line_8">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="wageTab">
+         <attribute name="title">
+          <string>Wage Cost</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_15">
+          <item row="0" column="4">
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="2">
+           <layout class="QGridLayout" name="gridLayout_7">
+            <item row="0" column="1">
+             <widget class="Line" name="line_7">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="Line" name="line_6">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="Line" name="line_13">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="4">
+             <widget class="Line" name="line_14">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="1">
+             <widget class="Line" name="line_9">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QGroupBox" name="groupBox_2">
+              <property name="autoFillBackground">
+               <bool>false</bool>
+              </property>
+              <property name="title">
+               <string>Weekly Wage Cost</string>
+              </property>
+              <property name="flat">
+               <bool>false</bool>
+              </property>
+              <property name="checkable">
+               <bool>false</bool>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_4">
+               <item row="2" column="0">
+                <widget class="QLabel" name="predictedWagePerclbl">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>90</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Pred. Wage %</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="predSalariedlbl">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>90</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Pred. Salaried</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="predWagelbl">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>90</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Pred. Wage</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="predHourlylbl">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>90</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Pred. Hourly</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <spacer name="verticalSpacer_5">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="3" column="1">
+                <widget class="QDoubleSpinBox" name="predWageBox">
+                 <property name="minimumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::NoButtons</enum>
+                 </property>
+                 <property name="prefix">
+                  <string>£</string>
+                 </property>
+                 <property name="decimals">
+                  <number>0</number>
+                 </property>
+                 <property name="maximum">
+                  <double>9999.000000000000000</double>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QDoubleSpinBox" name="predSalariedBox">
+                 <property name="minimumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::NoButtons</enum>
+                 </property>
+                 <property name="prefix">
+                  <string>£</string>
+                 </property>
+                 <property name="decimals">
+                  <number>0</number>
+                 </property>
+                 <property name="maximum">
+                  <double>9999.000000000000000</double>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QDoubleSpinBox" name="predHourlyBox">
+                 <property name="minimumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::NoButtons</enum>
+                 </property>
+                 <property name="prefix">
+                  <string>£</string>
+                 </property>
+                 <property name="decimals">
+                  <number>0</number>
+                 </property>
+                 <property name="maximum">
+                  <double>9999.000000000000000</double>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QDoubleSpinBox" name="predWagePercBox">
+                 <property name="minimumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::NoButtons</enum>
+                 </property>
+                 <property name="suffix">
+                  <string>%</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="Line" name="line_4">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QGroupBox" name="groupBox">
+              <property name="autoFillBackground">
+               <bool>false</bool>
+              </property>
+              <property name="title">
+               <string>Weekly Paye Costs</string>
+              </property>
+              <property name="flat">
+               <bool>false</bool>
+              </property>
+              <property name="checkable">
+               <bool>false</bool>
+              </property>
+              <layout class="QGridLayout" name="gridLayout">
+               <item row="1" column="1">
+                <widget class="QDoubleSpinBox" name="predBonusBox">
+                 <property name="minimumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::NoButtons</enum>
+                 </property>
+                 <property name="prefix">
+                  <string>£</string>
+                 </property>
+                 <property name="decimals">
+                  <number>0</number>
+                 </property>
+                 <property name="maximum">
+                  <double>9999.000000000000000</double>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="predPensionlbl">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>90</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Pred. Pension</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="predNIClbl">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>90</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Pred. NIC</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QDoubleSpinBox" name="predNICBox">
+                 <property name="minimumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::NoButtons</enum>
+                 </property>
+                 <property name="prefix">
+                  <string>£</string>
+                 </property>
+                 <property name="decimals">
+                  <number>0</number>
+                 </property>
+                 <property name="maximum">
+                  <double>9999.000000000000000</double>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <spacer name="verticalSpacer">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="0" column="1">
+                <widget class="QDoubleSpinBox" name="predPensionBox">
+                 <property name="minimumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::NoButtons</enum>
+                 </property>
+                 <property name="prefix">
+                  <string>£</string>
+                 </property>
+                 <property name="decimals">
+                  <number>0</number>
+                 </property>
+                 <property name="maximum">
+                  <double>9999.000000000000000</double>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="predBonuslbl">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>90</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Pred. Bonus</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+              <zorder>predNICBox</zorder>
+              <zorder>predBonuslbl</zorder>
+              <zorder>predBonusBox</zorder>
+              <zorder>predNIClbl</zorder>
+              <zorder>predPensionlbl</zorder>
+              <zorder>predPensionBox</zorder>
+              <zorder>verticalSpacer</zorder>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QGroupBox" name="groupBox_4">
+              <property name="autoFillBackground">
+               <bool>false</bool>
+              </property>
+              <property name="title">
+               <string>Week to Date</string>
+              </property>
+              <property name="flat">
+               <bool>false</bool>
+              </property>
+              <property name="checkable">
+               <bool>false</bool>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_12">
+               <item row="0" column="0">
+                <widget class="QLabel" name="wtdWageLbl">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>90</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>WTD Wage</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QDoubleSpinBox" name="wtdRevBox">
+                 <property name="minimumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::NoButtons</enum>
+                 </property>
+                 <property name="prefix">
+                  <string>£</string>
+                 </property>
+                 <property name="decimals">
+                  <number>0</number>
+                 </property>
+                 <property name="maximum">
+                  <double>99999.000000000000000</double>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QDoubleSpinBox" name="wtdWageBox">
+                 <property name="minimumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::NoButtons</enum>
+                 </property>
+                 <property name="prefix">
+                  <string>£</string>
+                 </property>
+                 <property name="decimals">
+                  <number>0</number>
+                 </property>
+                 <property name="maximum">
+                  <double>9999.000000000000000</double>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="wtdWagePerclbl">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>WTD Wage %</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QDoubleSpinBox" name="wtdWagePercBox">
+                 <property name="minimumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::NoButtons</enum>
+                 </property>
+                 <property name="suffix">
+                  <string>%</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <spacer name="verticalSpacer_7">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="wtdAVGSpendlbl">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>WTD Avg. £</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QDoubleSpinBox" name="wtdAvgSpendBox">
+                 <property name="minimumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::NoButtons</enum>
+                 </property>
+                 <property name="prefix">
+                  <string>£</string>
+                 </property>
+                 <property name="maximum">
+                  <double>999.000000000000000</double>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="wtdRevlbl">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>90</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>WTD Rev.</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="4" column="3">
+             <widget class="Line" name="line_11">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="Line" name="line_12">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="3">
+             <widget class="Line" name="line_5">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="2">
+             <widget class="QGroupBox" name="groupBox_5">
+              <property name="autoFillBackground">
+               <bool>false</bool>
+              </property>
+              <property name="title">
+               <string>Month to Date</string>
+              </property>
+              <property name="flat">
+               <bool>false</bool>
+              </property>
+              <property name="checkable">
+               <bool>false</bool>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_13">
+               <item row="4" column="0">
+                <spacer name="verticalSpacer_8">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="mtdWage">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>MTD Wage</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QDoubleSpinBox" name="mtdWageBox">
+                 <property name="minimumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::NoButtons</enum>
+                 </property>
+                 <property name="prefix">
+                  <string>£</string>
+                 </property>
+                 <property name="decimals">
+                  <number>0</number>
+                 </property>
+                 <property name="maximum">
+                  <double>10000000.000000000000000</double>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="mtdRevenue">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>MTD Rev.</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QDoubleSpinBox" name="mtdRevBox">
+                 <property name="minimumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::NoButtons</enum>
+                 </property>
+                 <property name="prefix">
+                  <string>£</string>
+                 </property>
+                 <property name="decimals">
+                  <number>0</number>
+                 </property>
+                 <property name="maximum">
+                  <double>99999.000000000000000</double>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="mtdWagePerc">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>MTD Wage %</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QDoubleSpinBox" name="mtdWagePercBox">
+                 <property name="minimumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::NoButtons</enum>
+                 </property>
+                 <property name="suffix">
+                  <string>%</string>
+                 </property>
+                 <property name="maximum">
+                  <double>10000.000000000000000</double>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="mtdAvgSpend">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>MTD Avg. £</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QDoubleSpinBox" name="mtdAvgSpendBox">
+                 <property name="minimumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::NoButtons</enum>
+                 </property>
+                 <property name="prefix">
+                  <string>£</string>
+                 </property>
+                 <property name="maximum">
+                  <double>999.000000000000000</double>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="0" column="4">
+             <widget class="QGroupBox" name="groupBox_3">
+              <property name="autoFillBackground">
+               <bool>false</bool>
+              </property>
+              <property name="title">
+               <string>Weekly Revenue</string>
+              </property>
+              <property name="flat">
+               <bool>false</bool>
+              </property>
+              <property name="checkable">
+               <bool>false</bool>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_10">
+               <item row="0" column="0">
+                <widget class="QLabel" name="predRevlbl">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>90</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Pred. Rev.</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QDoubleSpinBox" name="predRevBox">
+                 <property name="minimumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::NoButtons</enum>
+                 </property>
+                 <property name="prefix">
+                  <string>£</string>
+                 </property>
+                 <property name="decimals">
+                  <number>0</number>
+                 </property>
+                 <property name="maximum">
+                  <double>99999.000000000000000</double>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QDoubleSpinBox" name="predAvgSpendBox">
+                 <property name="minimumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::NoButtons</enum>
+                 </property>
+                 <property name="prefix">
+                  <string>£</string>
+                 </property>
+                 <property name="maximum">
+                  <double>999.000000000000000</double>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <spacer name="verticalSpacer_3">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="predAVGSpendlbl">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>18</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>90</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Pred. Avg. £</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <spacer name="verticalSpacer_6">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="4" column="4">
+             <layout class="QVBoxLayout" name="verticalLayout">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_2"/>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="coverTab">
+         <attribute name="title">
+          <string>Covers</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_6">
+          <item row="4" column="1">
+           <layout class="QGridLayout" name="gridLayout_8">
+            <item row="1" column="1">
+             <layout class="QGridLayout" name="gridLayout_11">
+              <item row="0" column="4">
+               <spacer name="horizontalSpacer_5">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="2" column="2">
+               <widget class="QLabel" name="YTDCoverslbl">
+                <property name="text">
+                 <string>YTD Cover Total</string>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="3">
+               <spacer name="verticalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="2">
+               <widget class="QLabel" name="MTDCoversLbl">
+                <property name="text">
+                 <string>MTD Covers Total</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="2">
+               <widget class="QSpinBox" name="YTDCoversTotalBox">
+                <property name="buttonSymbols">
+                 <enum>QAbstractSpinBox::NoButtons</enum>
+                </property>
+                <property name="maximum">
+                 <number>50000</number>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="2">
+               <widget class="QLabel" name="WeeklyCoversTotalLBL">
+                <property name="text">
+                 <string>Weekly Covers Total</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="2">
+               <widget class="QSpinBox" name="WeeklyCoversTotal">
+                <property name="buttonSymbols">
+                 <enum>QAbstractSpinBox::NoButtons</enum>
+                </property>
+                <property name="maximum">
+                 <number>1000</number>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QSpinBox" name="MTDCoversTotalBox">
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="buttonSymbols">
+                 <enum>QAbstractSpinBox::NoButtons</enum>
+                </property>
+                <property name="maximum">
+                 <number>5000</number>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="2">
+               <widget class="QPushButton" name="coverUpdateBUT">
+                <property name="minimumSize">
+                 <size>
+                  <width>122</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Save &amp; Refresh</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="6" column="0">
+             <widget class="QTableWidget" name="revenueTypeTable">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>600</width>
+                <height>200</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>600</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="alternatingRowColors">
+               <bool>true</bool>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>5</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="textElideMode">
+               <enum>Qt::ElideMiddle</enum>
+              </property>
+              <attribute name="horizontalHeaderMinimumSectionSize">
+               <number>1</number>
+              </attribute>
+              <attribute name="verticalHeaderMinimumSectionSize">
+               <number>1</number>
+              </attribute>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QTableWidget" name="predictedCoverTable">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>892</width>
+                <height>200</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>892</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::CurrentChanged|QAbstractItemView::DoubleClicked|QAbstractItemView::SelectedClicked</set>
+              </property>
+              <property name="alternatingRowColors">
+               <bool>true</bool>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>5</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="textElideMode">
+               <enum>Qt::ElideMiddle</enum>
+              </property>
+              <property name="columnCount">
+               <number>15</number>
+              </property>
+              <attribute name="horizontalHeaderCascadingSectionResizes">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="horizontalHeaderMinimumSectionSize">
+               <number>55</number>
+              </attribute>
+              <attribute name="horizontalHeaderStretchLastSection">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="verticalHeaderCascadingSectionResizes">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="verticalHeaderDefaultSectionSize">
+               <number>21</number>
+              </attribute>
+              <attribute name="verticalHeaderMinimumSectionSize">
+               <number>21</number>
+              </attribute>
+              <attribute name="verticalHeaderStretchLastSection">
+               <bool>false</bool>
+              </attribute>
+              <column>
+               <property name="text">
+                <string>RevenueType</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>MonAM</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>MonPM</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>TueAM </string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>TuePM </string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>WedAM</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>WedPM</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>ThurAM</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>ThurPM</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>FriAM   </string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>FriPM   </string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>SatAM  </string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>SatPM  </string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>SunAM </string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>SunPM </string>
+               </property>
+              </column>
+             </widget>
+            </item>
+            <item row="6" column="1">
+             <layout class="QVBoxLayout" name="verticalLayout_2">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_5">
+                <item>
+                 <widget class="QPushButton" name="addRevTypeBUT">
+                  <property name="text">
+                   <string>Add Revenue Type</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_2">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_6">
+                <item>
+                 <widget class="QPushButton" name="delRevenueTypeBUT">
+                  <property name="minimumSize">
+                   <size>
+                    <width>122</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Del Revenue Type</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_6">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_4">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_7">
+                <item>
+                 <spacer name="horizontalSpacer_7">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item row="0" column="0">
+             <layout class="QHBoxLayout" name="horizontalLayout_8">
+              <item>
+               <widget class="QLabel" name="spacerDateLBL">
+                <property name="minimumSize">
+                 <size>
+                  <width>109</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>109</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="Line" name="line_21">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="monDateLBL">
+                <property name="minimumSize">
+                 <size>
+                  <width>96</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>96</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Mon</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="Line" name="line_20">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="tueDateLBL">
+                <property name="minimumSize">
+                 <size>
+                  <width>96</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>96</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Tue</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="Line" name="line_19">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="wedDateLBL">
+                <property name="minimumSize">
+                 <size>
+                  <width>96</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>96</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Wed</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="Line" name="line_18">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="thurDateLBL">
+                <property name="minimumSize">
+                 <size>
+                  <width>96</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>96</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Thur</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="Line" name="line_17">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="friDateLBL">
+                <property name="minimumSize">
+                 <size>
+                  <width>96</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>96</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Fri</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="Line" name="line_16">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="satDateLBL">
+                <property name="minimumSize">
+                 <size>
+                  <width>96</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>96</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Sat</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="Line" name="line_15">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="sunDateLBL">
+                <property name="minimumSize">
+                 <size>
+                  <width>96</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>96</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Sun</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="Line" name="line_22">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QDateEdit" name="dateEdit">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>27</height>
+         </size>
+        </property>
+        <property name="currentSection">
+         <enum>QDateTimeEdit::MonthSection</enum>
+        </property>
+        <property name="calendarPopup">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="lessWeekBUT">
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="todayBut">
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="moreWeekBUT">
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_8">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1288</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuReporting">
+    <property name="title">
+     <string>Reporting</string>
+    </property>
+    <addaction name="actionReporting_Tool"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionPrint_Rota"/>
+   </widget>
+   <widget class="QMenu" name="menuHolidays">
+    <property name="title">
+     <string>Holidays</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuFunctions">
+    <property name="title">
+     <string>Data</string>
+    </property>
+    <addaction name="actionEmployee"/>
+    <addaction name="actionPayroll_Variables"/>
+    <addaction name="separator"/>
+    <addaction name="actionBudget_and_Actuals"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuFunctions"/>
+   <addaction name="menuReporting"/>
+   <addaction name="menuHolidays"/>
+  </widget>
+  <action name="actionEmployee">
+   <property name="text">
+    <string>Employee Data</string>
+   </property>
+  </action>
+  <action name="actionCover_forecast_by_type">
+   <property name="text">
+    <string>Cover Forecast by Type</string>
+   </property>
+  </action>
+  <action name="actionCover_Types">
+   <property name="text">
+    <string>Cover Types</string>
+   </property>
+  </action>
+  <action name="actionActual_Covers_Revenue">
+   <property name="text">
+    <string>Actual Covers and Revenue</string>
+   </property>
+  </action>
+  <action name="Budget_and_Actuals">
+   <property name="text">
+    <string>Revenue Budget and Actuals</string>
+   </property>
+  </action>
+  <action name="actionPrint_Rota">
+   <property name="text">
+    <string>Print Rota</string>
+   </property>
+  </action>
+  <action name="actionPayroll_Variables">
+   <property name="text">
+    <string>Payroll Variables</string>
+   </property>
+  </action>
+  <action name="actionReporting_Tool">
+   <property name="text">
+    <string>Reporting Tool</string>
+   </property>
+  </action>
+  <action name="actionBudget_and_Actual">
+   <property name="text">
+    <string>Budget and Actual</string>
+   </property>
+  </action>
+  <action name="actionBudget_and_Actuals">
+   <property name="text">
+    <string>Budget and Actuals</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

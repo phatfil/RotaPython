@@ -1,0 +1,28 @@
+Linux mint
+
+These packages are need before running:
+
+sudo apt-get install python pip  -- 
+sudo apt-get install python-dev libmysqlclient-dev
+sudo apt-get install MySQL-python
+
+Password encryption: 
+
+sudo apt-get installlibffi-dev libssl-dev
+sudo pip install bcrypt
+python -c "import bcrypt"   # did it work?
+
+MYSQL make connections needs to be increased
+
+install this to allow for better formating og the printable tables
+sudo -H pip install jinja2
+
+
+pyuic4 reportWindow.ui -o reportWindow.py
+
+Code for running c profiler
+pr = cProfile.Profile()
+pr.enable()
+call_function()
+pr.disable()
+pr.print_stats(sort='time')

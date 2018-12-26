@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddEmpDialog</class>
+ <widget class="QDialog" name="AddEmpDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>312</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Add Employee</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="AddEmpLbl">
+     <property name="text">
+      <string>Select Employees to be added</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string/>
+     </property>
+     <widget class="QPushButton" name="AddEmpBUT">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>85</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Add</string>
+      </property>
+     </widget>
+     <zorder>listView</zorder>
+     <zorder>AddEmpBUT</zorder>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QListWidget" name="EmpList">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>200</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::MultiSelection</enum>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
