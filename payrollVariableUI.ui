@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>575</width>
+    <width>846</width>
     <height>339</height>
    </rect>
   </property>
@@ -18,12 +18,12 @@
     <rect>
      <x>20</x>
      <y>10</y>
-     <width>531</width>
+     <width>800</width>
      <height>281</height>
     </rect>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="tab_2">
     <attribute name="title">
@@ -34,7 +34,7 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>531</width>
+       <width>800</width>
        <height>251</height>
       </rect>
      </property>
@@ -50,6 +50,12 @@
      <property name="alternatingRowColors">
       <bool>true</bool>
      </property>
+     <property name="columnCount">
+      <number>8</number>
+     </property>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>115</number>
+     </attribute>
      <column>
       <property name="text">
        <string>ID</string>
@@ -57,27 +63,37 @@
      </column>
      <column>
       <property name="text">
-       <string>MinimumAge</string>
+       <string>Live Date</string>
       </property>
      </column>
      <column>
       <property name="text">
-       <string>NICRate</string>
+       <string>Minimum Age</string>
       </property>
      </column>
      <column>
       <property name="text">
-       <string>Threshold</string>
+       <string>NIC Rate</string>
       </property>
      </column>
      <column>
       <property name="text">
-       <string>Pension%</string>
+       <string>NIC Threshold</string>
       </property>
      </column>
      <column>
       <property name="text">
-       <string>Date</string>
+       <string>Pension %</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>SSP Day Rate</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>SSP LEL</string>
       </property>
      </column>
     </widget>
@@ -91,7 +107,7 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>531</width>
+       <width>700</width>
        <height>251</height>
       </rect>
      </property>
@@ -138,7 +154,7 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>531</width>
+       <width>800</width>
        <height>251</height>
       </rect>
      </property>
@@ -186,7 +202,7 @@
   <widget class="QPushButton" name="updateBUT">
    <property name="geometry">
     <rect>
-     <x>466</x>
+     <x>736</x>
      <y>300</y>
      <width>85</width>
      <height>27</height>
@@ -231,7 +247,7 @@
   <widget class="QPushButton" name="closeBUT">
    <property name="geometry">
     <rect>
-     <x>380</x>
+     <x>650</x>
      <y>300</y>
      <width>85</width>
      <height>27</height>

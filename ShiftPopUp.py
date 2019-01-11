@@ -540,7 +540,7 @@ class ShiftPopUp(QtGui.QDialog, QtGui.QLabel):
                 pass
 
 
-        # FIXME: deal with the am pm calc of hours rather than total hours for the hourly paid staff in the scenario that an
+        # FIXME: deal with the am pm calc of hours rather than total hours for the hourly paid staff in the scenario that
         # FIXME: is holiday in the AM and working in the PM
         # if employee is hourly paid
         elif salOrHourly == 1:

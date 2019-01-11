@@ -6,7 +6,7 @@ dataBaseType = "QMYSQL"
 databaseName = 'mydb'
 userName = "phil"
 password = "g4ngst3r"
-host = 'localhost'
+host = '127.0.0.1'
 
 class Querydb():
     def __init__(self, sql, formatting):

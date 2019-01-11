@@ -26,6 +26,10 @@ class reportWindowui(QtGui.QDialog):
 
         self.firstClick = []
 
+        # set the date pickers to todays date
+        self.ui.fromDateEdit.setDate(datetime.date.today())
+        self.ui.toDateEdit.setDate(datetime.date.today())
+
     def calendar(self):
         self.cal = WidgetTools.calendarWidget()
         self.ui.verticalLayout.insertLayout(9, self.cal.calendarWidget)
@@ -100,11 +104,12 @@ class reportWindowui(QtGui.QDialog):
 
                 empID = empList[emp][0]
                 shiftDate = self.dateList[date]
-                SalariedShiftCost = self.emp.empShiftSalaryCost(shiftDate, empID)
+                shiftType = self.rotaData.empAMPMshiftTypeAtdate(empID, shiftDate)
+                SalariedShiftCost = self.emp.empShiftSalaryCost(shiftDate, shiftType, empID)
                 SalariedNicShiftCost = self.emp.empNicCostByShiftSalary(empID, shiftDate, threshold, age, rate)
                 shiftBonusCost = self.emp.empShiftBonusCost(shiftDate, empID)
                 HourlyTotalHours = self.rotaData.empTotalHoursDay(empID, shiftDate, 'day')
-                HourlyHourlyCost = self.emp.empShiftHourlyCost(shiftDate, empID)
+                HourlyHourlyCost = self.emp.empShiftHourlyPay(shiftDate, empID)
                 HourlyNicShiftCost = self.emp.empNicCostByShiftHourly(empID, shiftDate, threshold, age, rate)
                 pensionCostHourly = self.emp.empHourlyPensionShiftCalc(empID, shiftDate, threshold, age, rate,
                                                                        pensionPercent)

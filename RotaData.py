@@ -145,3 +145,11 @@ class rota:
                 pass
 
 
+    def empAMPMshiftTypeAtdate(self, empID, shiftDate):
+        if shiftDate is datetime.date:
+            print ('Date for RotaData.empAMPMshiftTypeAtDate must datetime.date')
+        shifts = [(shiftTypeAM, shiftTypePM) for
+                  shiftsID, EmployeeID, Date, StartAM, FinAM, BrkAM, StartPM, FinPM, BrkPM, ConcatShift, TotalHours,
+                  shiftTypeAM, shiftTypePM, EmployeeDep, DepAM, DepPM, holHours, holDays in self.__shiftsTable if
+                  EmployeeID == empID and shiftDate == Date]
+        return shifts

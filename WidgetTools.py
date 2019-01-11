@@ -155,7 +155,7 @@ class calendarWidget(QtGui.QWidget):
                 dayData2 = ""
                 self.calWeeks[row].append([dayDate, dateInfo, dayData, dayData2])
             row += 1
-        print self.calWeeks
+        print (self.calWeeks)
 
         for row in range(len(self.calWeeks)):
             self.tableWidget.insertRow(row)
@@ -185,7 +185,7 @@ class calendarWidget(QtGui.QWidget):
         sccol = lastCell[1]
 
         days = (((scrow+1)-(fcrow+1))*7)-(fccol+1)+(sccol+2)
-        print days
+        print (days)
 
         cellRange = [[fcrow, fccol]]
 
@@ -198,7 +198,7 @@ class calendarWidget(QtGui.QWidget):
                 fccol += 1
                 cellRange.append([fcrow, fccol])
 
-        print cellRange
+        print (cellRange)
         return cellRange
 
     def cellSelection(self):

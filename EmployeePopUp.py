@@ -41,6 +41,7 @@ class EmployeePopUp(QtGui.QDialog):
     def defineTriggers(self):
         # define triggers
         self.uie.EmployeeListTable.currentCellChanged.connect(self.updateEmpDataToDB)
+        self.uie.EmployeeListTable.currentCellChanged.connect(self.clearCheckBoxes)
         self.uie.EmployeeListTable.currentCellChanged.connect(self.queryDB_reloadEmpModule)
         self.uie.EmployeeListTable.currentCellChanged.connect(self.getIDfromcurrentrow)
         self.uie.EmployeeListTable.currentCellChanged.connect(self.selectedEmpVariableUpdate)
@@ -68,6 +69,23 @@ class EmployeePopUp(QtGui.QDialog):
         self.uie.holidayEntitlementAddBUT.clicked.connect(self.addHolidayEnt)
         self.uie.holidayEntitlementDelBUT.clicked.connect(self.delHolidayEnt)
         self.uie.HolidayUpdateBUT.clicked.connect(self.updateHolEntitlement)
+
+    def setEmpWorkingDaysInWeek(self):
+        self.uie.mondayCB.setChecked(True) \
+            if self.emp.empIsDayAContractedDay(self.currentID,0) is True else self.uie.mondayCB.setChecked(False)
+        self.uie.tuesdayCB.setChecked(True) \
+            if self.emp.empIsDayAContractedDay(self.currentID, 1) is True else self.uie.mondayCB.setChecked(False)
+        self.uie.wednesdayCB.setChecked(True) \
+            if self.emp.empIsDayAContractedDay(self.currentID, 2) is True else self.uie.mondayCB.setChecked(False)
+        self.uie.thursdayCB.setChecked(True) \
+            if self.emp.empIsDayAContractedDay(self.currentID, 3) is True else self.uie.mondayCB.setChecked(False)
+        self.uie.fridayCB.setChecked(True) \
+            if self.emp.empIsDayAContractedDay(self.currentID, 4) is True else self.uie.mondayCB.setChecked(False)
+        self.uie.saturdayCB.setChecked(True) \
+            if self.emp.empIsDayAContractedDay(self.currentID, 5) is True else self.uie.mondayCB.setChecked(False)
+        self.uie.sundayCB.setChecked(True) \
+            if self.emp.empIsDayAContractedDay(self.currentID, 6) is True else self.uie.mondayCB.setChecked(False)
+        self.uie.contractedDaysPerWeekBOX.setValue(self.emp.empContractedDaysofWork(self.currentID)[1])
 
     def updateButtonclicked(self):
         self.updateEmpDataToDB()
@@ -113,6 +131,8 @@ class EmployeePopUp(QtGui.QDialog):
             self.populateBonusTable()
             self.populateHolidayTable()
 
+
+
         else:
             self.uie.empNameBox.setText(self.emp.empName(self.currentID))
             self.uie.empDOBbox.setDate(self.emp.empDOB(self.currentID))
@@ -128,6 +148,7 @@ class EmployeePopUp(QtGui.QDialog):
             self.populateHolidayTable()
             self.setDepCombo()
             self.setSalCombo()
+            self.setEmpWorkingDaysInWeek()
 
     def updateNameListVariablewithCurrentDBData(self):
         self.queryDB_reloadEmpModule()
@@ -146,6 +167,7 @@ class EmployeePopUp(QtGui.QDialog):
         self.currentHome = self.emp.empHphone(self.currentID)
         self.currentMobile = self.emp.empMphone(self.currentID)
         self.currentStDate = self.emp.empStartDate(self.currentID)
+
 
     def clearFormandSwitchtoAddEmpFormConfig(self):
         self.clearForm()
@@ -276,6 +298,13 @@ class EmployeePopUp(QtGui.QDialog):
         home = self.uie.homeBox.text()
         mobile = self.uie.mobileBox.text()
         StDate = QtCore.QDate.toPyDate(self.uie.empStDateBox.date())
+        mon = 1 if self.uie.mondayCB.isChecked() is True else 0
+        tue = 1 if self.uie.tuesdayCB.isChecked() is True else 0
+        wed = 1 if self.uie.wednesdayCB.isChecked() is True else 0
+        thu = 1 if self.uie.thursdayCB.isChecked() is True else 0
+        fri = 1 if self.uie.fridayCB.isChecked() is True else 0
+        sat = 1 if self.uie.saturdayCB.isChecked() is True else 0
+        sun = 1 if self.uie.sundayCB.isChecked() is True else 0
 
         DB.Querydb('''UPDATE Employee_TBL
                              SET  Name = %s, 
@@ -286,11 +315,18 @@ class EmployeePopUp(QtGui.QDialog):
                              Email = %s, 
                              HomePhone = %s, 
                              MobilePhone = %s, 
-                             EmpStDate = %s
+                             EmpStDate = %s,
+                             QDMon = %s,
+                             QDTue = %s,
+                             QDWed = %s,
+                             QDThu = %s,
+                             QDFri = %s,
+                             QDSat = %s,
+                             QDSun = %s
                              WHERE idEmployee_TBL = %s;''',
                    (name, DOB, departmentID, salorHourlyID,
                     adrs, email, home, mobile,
-                    StDate, self.currentID)).InsertOneExecutewithFormatting()
+                    StDate, mon, tue, wed, thu, fri, sat, sun, self.currentID)).InsertOneExecutewithFormatting()
 
     def setReturntoID(self):
         self.IDtoReturnto = self.currentID
@@ -543,6 +579,16 @@ class EmployeePopUp(QtGui.QDialog):
         self.populateSalaryTable()
         self.populateBonusTable()
         self.populateHolidayTable()
+        self.clearCheckBoxes()
+
+    def clearCheckBoxes(self):
+        self.uie.mondayCB.setChecked(False)
+        self.uie.tuesdayCB.setChecked(False)
+        self.uie.wednesdayCB.setChecked(False)
+        self.uie.thursdayCB.setChecked(False)
+        self.uie.fridayCB.setChecked(False)
+        self.uie.saturdayCB.setChecked(False)
+        self.uie.sundayCB.setChecked(False)
 
     def emitTrigger(self):
         self.trigger.emit()

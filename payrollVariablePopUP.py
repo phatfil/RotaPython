@@ -27,7 +27,7 @@ class payrollVariablePopUp(QtGui.QDialog):
         self.NMWRates = DB.Querydb("""SELECT * FROM nmwRates""", None).fetchAllRecordswithFormatting()
         self.NMWBands = DB.Querydb("""SELECT * FROM nmwBands""", None).fetchAllRecordswithFormatting()
         self.salCalVar = DB.Querydb("""SELECT * FROM SalaryCalVariables""", None).fetchAllRecordswithFormatting()
-
+        print (self.salCalVar)
         self.ratesTable = WidgetTools.TableWidgetTools()
         self.ratesTable.setWidget(self.uip.ratesNMWTableWidget)
         self.ratesTable.populateTableWidget_Widgets(self.NMWRates, 4, 0, [None, self.nmwBandComboListExtract(), None, 'date'])
@@ -39,7 +39,7 @@ class payrollVariablePopUp(QtGui.QDialog):
 
         self.salVarTable = WidgetTools.TableWidgetTools()
         self.salVarTable.setWidget(self.uip.pensionNICTableWidget)
-        self.salVarTable.populateTableWidget_Widgets(self.salCalVar, 6, 0, [None, None, 'percentage', None,  'percentage', 'date'])
+        self.salVarTable.populateTableWidget_Widgets(self.salCalVar, 8, 0, [None, 'date', None, 'percentage', None,  'percentage', None, None])
 
     def nmwBandIDExtract(self, band):
         if self.NMWBands == ():
@@ -59,8 +59,28 @@ class payrollVariablePopUp(QtGui.QDialog):
         if self.NMWRates == ():
             return 0
         else:
-            data = [[VariablesDate, minAge] for nicVariablesID, minAge,  nicRate, threshold, pensionPercentage, VariablesDate
+            data = [[VariablesDate, minAge] for nicVariablesID, VariablesDate ,minAge,  nicRate, threshold, pensionPercentage, sickPay, SSPLEL
                     in self.salCalVar if Sdate >= VariablesDate]
+            result = max(data)
+            return result[1]
+
+    def SSPLowerEarningsLimit(self, Sdate):
+        if self.NMWRates == ():
+            return 0
+        else:
+            data = [[VariablesDate, SSPLEL] for nicVariablesID, VariablesDate ,minAge,  nicRate, threshold, pensionPercentage, sickPay, SSPLEL
+                    in self.salCalVar if Sdate >= VariablesDate]
+
+            result = max(data)
+            return result[1]
+
+    def sickPayDayRate(self, Sdate):
+        if self.NMWRates == ():
+            return 0
+        else:
+            data = [[VariablesDate, sickPay] for nicVariablesID, VariablesDate ,minAge,  nicRate, threshold, pensionPercentage, sickPay, SSPLEL
+                    in self.salCalVar if Sdate >= VariablesDate]
+
             result = max(data)
             return result[1]
 
@@ -68,7 +88,7 @@ class payrollVariablePopUp(QtGui.QDialog):
         if self.NMWRates == ():
             return 0
         else:
-            data = [[VariablesDate, nicRate] for nicVariablesID, minAge,  nicRate, threshold, pensionPercentage, VariablesDate
+            data = [[VariablesDate, nicRate] for nicVariablesID, VariablesDate , minAge,  nicRate, threshold, pensionPercentage, sickPay, SSPLEL
                     in self.salCalVar if Sdate >= VariablesDate]
 
             result = max(data)
@@ -78,8 +98,8 @@ class payrollVariablePopUp(QtGui.QDialog):
         if self.NMWRates == ():
             return 0
         else:
-            data = [[VariablesDate, threshold] for nicVariablesID, minAge,  nicRate, threshold, pensionPercentage, VariablesDate
-                    in self.salCalVar if Sdate >= VariablesDate]
+            data = [[VariablesDate, threshold] for nicVariablesID, VariablesDate , minAge,  nicRate, threshold, pensionPercentage, sickPay, SSPLEL
+                     in self.salCalVar if Sdate >= VariablesDate]
             result = max(data)
             return result[1]
 
@@ -87,8 +107,8 @@ class payrollVariablePopUp(QtGui.QDialog):
         if self.NMWRates == ():
             return 0
         else:
-            data = [[VariablesDate, pensionPercentage] for nicVariablesID, minAge, nicRate, threshold, pensionPercentage, VariablesDate
-                    in self.salCalVar if Sdate >= VariablesDate]
+            data = [[VariablesDate, pensionPercentage] for nicVariablesID, VariablesDate , minAge, nicRate, threshold, pensionPercentage, sickPay, SSPLEL
+                     in self.salCalVar if Sdate >= VariablesDate]
             result = max(data)
             return result[1]
 

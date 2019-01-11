@@ -766,6 +766,139 @@
       <string>Save</string>
      </property>
     </widget>
+    <widget class="QCheckBox" name="mondayCB">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>310</y>
+       <width>88</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Monday</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="tuesdayCB">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>330</y>
+       <width>88</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Tuesday</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="wednesdayCB">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>350</y>
+       <width>101</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Wednesday</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="thursdayCB">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>370</y>
+       <width>88</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Thursday</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="fridayCB">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>390</y>
+       <width>88</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Friday</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="saturdayCB">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>410</y>
+       <width>88</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Saturday</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="sundayCB">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>430</y>
+       <width>88</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Sunday</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>280</y>
+       <width>191</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Contracted Days</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="contractedDaysPerWeekBOX">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>480</y>
+       <width>31</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::NoButtons</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>460</y>
+       <width>171</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Contracted Days Per Week</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QPushButton" name="UpdateEmpRecordBUT">
