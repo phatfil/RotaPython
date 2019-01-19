@@ -3,14 +3,12 @@ import calendar
 from dateutil.relativedelta import *
 import Employees
 
-D1 = datetime.date(2018,1,28)
-D2 = datetime.date(2018,2,28).strftime('%Y-%m-%d')
+startDate = datetime.date(2019,1,1)
+endDate = datetime.date(2019,1,10)
 d3 = "2019-10-14"
+d4 = {1: [5, 1], 2: [10, 2]}
 
-
-
-dic = {}
-data = 1
-name = 1
-dic[name] = data
-print (dic)
+a = 0
+for key , value in list(d4.items()):
+    a += d4[key][0]
+print (a)

@@ -22,12 +22,11 @@ class payrollVariablePopUp(QtGui.QDialog):
         self.uip.addBUT.clicked.connect(self.addRow)
         self.uip.delBUT.clicked.connect(self.delRow)
 
-
     def populateTables(self):
         self.NMWRates = DB.Querydb("""SELECT * FROM nmwRates""", None).fetchAllRecordswithFormatting()
         self.NMWBands = DB.Querydb("""SELECT * FROM nmwBands""", None).fetchAllRecordswithFormatting()
         self.salCalVar = DB.Querydb("""SELECT * FROM SalaryCalVariables""", None).fetchAllRecordswithFormatting()
-        print (self.salCalVar)
+        #print (self.salCalVar)
         self.ratesTable = WidgetTools.TableWidgetTools()
         self.ratesTable.setWidget(self.uip.ratesNMWTableWidget)
         self.ratesTable.populateTableWidget_Widgets(self.NMWRates, 4, 0, [None, self.nmwBandComboListExtract(), None, 'date'])
@@ -61,8 +60,11 @@ class payrollVariablePopUp(QtGui.QDialog):
         else:
             data = [[VariablesDate, minAge] for nicVariablesID, VariablesDate ,minAge,  nicRate, threshold, pensionPercentage, sickPay, SSPLEL
                     in self.salCalVar if Sdate >= VariablesDate]
-            result = max(data)
-            return result[1]
+            if data == []:
+                pass
+            else:
+                result = max(data)
+                return result[1]
 
     def SSPLowerEarningsLimit(self, Sdate):
         if self.NMWRates == ():
@@ -71,8 +73,11 @@ class payrollVariablePopUp(QtGui.QDialog):
             data = [[VariablesDate, SSPLEL] for nicVariablesID, VariablesDate ,minAge,  nicRate, threshold, pensionPercentage, sickPay, SSPLEL
                     in self.salCalVar if Sdate >= VariablesDate]
 
-            result = max(data)
-            return result[1]
+            if data == []:
+                pass
+            else:
+                result = max(data)
+                return result[1]
 
     def sickPayDayRate(self, Sdate):
         if self.NMWRates == ():
@@ -81,8 +86,11 @@ class payrollVariablePopUp(QtGui.QDialog):
             data = [[VariablesDate, sickPay] for nicVariablesID, VariablesDate ,minAge,  nicRate, threshold, pensionPercentage, sickPay, SSPLEL
                     in self.salCalVar if Sdate >= VariablesDate]
 
-            result = max(data)
-            return result[1]
+            if data == []:
+                pass
+            else:
+                result = max(data)
+                return result[1]
 
     def nicRate(self, Sdate):
         if self.NMWRates == ():
@@ -91,8 +99,11 @@ class payrollVariablePopUp(QtGui.QDialog):
             data = [[VariablesDate, nicRate] for nicVariablesID, VariablesDate , minAge,  nicRate, threshold, pensionPercentage, sickPay, SSPLEL
                     in self.salCalVar if Sdate >= VariablesDate]
 
-            result = max(data)
-            return result[1]
+            if data == []:
+                pass
+            else:
+                result = max(data)
+                return result[1]
 
     def nicThreshold(self, Sdate):
         if self.NMWRates == ():
@@ -100,8 +111,11 @@ class payrollVariablePopUp(QtGui.QDialog):
         else:
             data = [[VariablesDate, threshold] for nicVariablesID, VariablesDate , minAge,  nicRate, threshold, pensionPercentage, sickPay, SSPLEL
                      in self.salCalVar if Sdate >= VariablesDate]
-            result = max(data)
-            return result[1]
+            if data == []:
+                pass
+            else:
+                result = max(data)
+                return result[1]
 
     def pensionPecentage(self, Sdate):
         if self.NMWRates == ():
@@ -109,8 +123,11 @@ class payrollVariablePopUp(QtGui.QDialog):
         else:
             data = [[VariablesDate, pensionPercentage] for nicVariablesID, VariablesDate , minAge, nicRate, threshold, pensionPercentage, sickPay, SSPLEL
                      in self.salCalVar if Sdate >= VariablesDate]
-            result = max(data)
-            return result[1]
+            if data == []:
+                pass
+            else:
+                result = max(data)
+                return result[1]
 
     def closeWindow(self):
         self.close()

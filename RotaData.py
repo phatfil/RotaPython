@@ -37,9 +37,9 @@ class rota:
 
     def shiftTypeReportData(self, fromdate, todate, shiftTypeID):
         shiftTypeData = []
-        print('shift table', self.__shiftsTable)
-        print('from Date', fromdate)
-        print('to Date', todate)
+        #print('shift table', self.__shiftsTable)
+        #print('from Date', fromdate)
+        #print('to Date', todate)
         for a in range(len(self.__shiftsTable)):
             shiftsID = self.__shiftsTable[a][0]
             EmployeeID = self.__shiftsTable[a][1]
@@ -59,7 +59,7 @@ class rota:
             # DepPM = self.__shiftsTable[a][15]
             calcAM = ((FinAM - StartAM) - BrkAM)
             calcPM = ((FinPM - StartPM) - BrkPM)
-            print('date', Date)
+            #print('date', Date)
             if fromdate <= Date and todate >= Date:
                 if shiftTypeAM == shiftTypeID or shiftTypePM == shiftTypeID:
                     if shiftTypeAM == shiftTypeID:
@@ -84,7 +84,7 @@ class rota:
                     shiftTypeAM, shiftTypePM, EmployeeDep, DepAM, DepPM in self.__shiftsTable if
                     fromdate <= Date <= todate and (shiftTypeAM == shiftTypeID or shiftTypePM == shiftTypeID)]
         """
-        print('shit type data', shiftTypeData)
+        #print('shit type data', shiftTypeData)
         return shiftTypeData
 
     def empTotalHoursPeriod(self, empID, fromDate, toDate):

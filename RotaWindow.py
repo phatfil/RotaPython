@@ -5,6 +5,7 @@ from PyQt4 import QtGui, QtCore
 from dateutil.relativedelta import *
 from decimal import Decimal
 import calendar
+import time
 
 
 import ActualRevWindow
@@ -271,7 +272,12 @@ class MainWindow(QtGui.QMainWindow):
                                        self.salorHourlyTable)
 
     def launchEmployeeInfoPopUp(self):
-        empPopUp = EmployeePopUp.EmployeePopUp('2011-01-01', '2020-01-01')
+        # TODO: think this through, currently + and - 1 year from selected date
+        toDate = datetime.date.strftime(self.selectedDate + relativedelta(years=5), '%Y-%m-%d')
+        fromDate = datetime.date.strftime(self.selectedDate - relativedelta(years=5), '%Y-%m-%d')
+
+        print (fromDate, toDate)
+        empPopUp = EmployeePopUp.EmployeePopUp(fromDate, toDate)
         empPopUp.trigger.connect(self.loadRota)
         empPopUp.exec_()
 
@@ -367,14 +373,20 @@ class MainWindow(QtGui.QMainWindow):
         self.PopulateRotaCoversTotals()
         # Populate the cover totals boxes
         self.populateCoverTotalsBoxes()
-
+        #self.ui.tabWidget.close()
+        #self.ui.tabWidget.show()
         # if wage tab is selected, calculate the wage information
         if self.ui.tabWidget.currentIndex() == 1:
+            splash_pix = QtGui.QPixmap('splash.png')
+            splash = QtGui.QSplashScreen(splash_pix, QtCore.Qt.WindowStaysOnTopHint)
+            splash.setMask(splash_pix.mask())
+            splash.show()
+            app.processEvents()
 
             self.populateWeeklyWageInformation()
-
             self.populateMonthToDateWageInformation()
 
+            splash.finish(self.ui.wageTab)
         else:
             pass
 
@@ -752,7 +764,7 @@ class MainWindow(QtGui.QMainWindow):
             self.ui.predAvgSpendBox.setValue(predictedRevenueTotal / predictedCoverTotal)
         else:
             self.ui.predAvgSpendBox.setValue(0)
-
+    """
     def calculateQualifyingSickPeriodsInDateRange(self, dateRange):
         empList = self.emp.salCalcEmpList(str(dateRange[0]), str(dateRange[-1]))
         QDsickTotals = {}
@@ -764,41 +776,126 @@ class MainWindow(QtGui.QMainWindow):
             # create key for each emp in list key:[QDs, first Date]
             QDsickTotals[empList[emp][0]] = [0, None]
 
+            # TODO: build in mechanism to join PIWs
             # iterate through dates in range
             for date in xrange(len(dateRange)):
-
-                # if shift type empty, pass
-                if self.rotaData.empAMPMshiftTypeAtdate(empList[emp][0], dateRange[date]) == []:
-                    counter = 0
-                else:
-                    # if either am or pm shift is sick then count
-                    if self.rotaData.empAMPMshiftTypeAtdate(empList[emp][0], dateRange[date])[0][0] == 3 \
-                            or self.rotaData.empAMPMshiftTypeAtdate(empList[emp][0], dateRange[date])[0][1] == 3:
-                        counter +=1
-
-                        # if the first date append first date to list
-                        if counter == 1:
-                            firstDate.append(dateRange[date])
-                        else:
-                            pass
-
-                        # if 4th sick day in a row add a QD to the corresponding key in dict
-                        if counter > 3:
-                            QDsickTotals[empList[emp][0]][0] += 1
-                            QDsickTotals[empList[emp][0]][1] = firstDate
-                        else:
-                            pass
-
-                    else:
+                # is the date a QD
+                if self.emp.empIsDateAContractedDay(empList[emp][0], dateRange[date]) is True:
+                    # if shift type empty, pass
+                    if self.rotaData.empAMPMshiftTypeAtdate(empList[emp][0], dateRange[date]) == []:
                         counter = 0
+                    else:
+                        # if either am or pm shift is sick and the then count
+                        if self.rotaData.empAMPMshiftTypeAtdate(empList[emp][0], dateRange[date])[0][0] == 3 \
+                                or self.rotaData.empAMPMshiftTypeAtdate(empList[emp][0], dateRange[date])[0][1] == 3:
+                            counter +=1
 
-        print ('sick Totals - RotaWindow.CQSPIDR', QDsickTotals)
-        print ('First Date - RotaWindow.CQSPIDR', firstDate)
+                            # if the first date append first date to list
+                            if counter == 1:
+                                firstDate.append(dateRange[date])
+                            else:
+                                pass
+
+                            # if 4th sick day in a row add a QD to the corresponding key in dict
+                            if counter > 3:
+                                QDsickTotals[empList[emp][0]][0] += 1
+                                QDsickTotals[empList[emp][0]][1] = firstDate
+                            else:
+                                pass
+
+                        else:
+                            counter = 0
+                else:
+                    pass
+
+        #print ('sick Totals - RotaWindow.CQSPIDR', QDsickTotals)
+        #print ('First Date - RotaWindow.CQSPIDR', firstDate)
+
+        # convert Qualifying sick totals into money and return results
+        results = self.sickPayEntitlementCalc(dateRange, QDsickTotals)
+        return results
+
+    def sickPayEntitlementCalc(self, dateRange, QDEmpDict):
+        for key, value in list(QDEmpDict.items()):
+            if value[0] == 0:
+                pass
+            else:
+                empID = key
+
+                payrollVariables = payrollVariablePopUP.payrollVariablePopUp()
+                dayRate = payrollVariables.sickPayDayRate(dateRange[-1])
+                QDs = QDEmpDict.get(empID)[0]
+                empDaysPerWeek = self.emp.empContractedDaysofWork(empID)[1]
+                lowerEarningsLimit = payrollVariables.SSPLowerEarningsLimit(dateRange[-1])
+
+                # Calculate End of relative period ie the last pay day before first day of sickness
+                firstQualifyingDate = QDEmpDict.get(empID)[1][0]
+                EoRP_previousMonth = firstQualifyingDate + relativedelta(months=-1)
+                EoRP_last_friday = max(
+                    week[calendar.FRIDAY] for week in
+                    calendar.monthcalendar(EoRP_previousMonth.year, EoRP_previousMonth.month))
+                EoRP = datetime.date(EoRP_previousMonth.year, EoRP_previousMonth.month, EoRP_last_friday)
+
+                # Calculate the Start of the relative period being no less than 8 weeks before EoRP
+                EoRPLess8Weeks = EoRP + relativedelta(weeks=-8)
+                SoRP_previousMonth = EoRPLess8Weeks + relativedelta(months=-1)
+                SoRP_last_friday = max(
+                    week[calendar.FRIDAY] for week in
+                    calendar.monthcalendar(SoRP_previousMonth.year, SoRP_previousMonth.month))
+                SoRP = datetime.date(SoRP_previousMonth.year, SoRP_previousMonth.month, SoRP_last_friday)
+
+                report = reporting.reportWindowui(self.shiftsTable)
+                report.importEmpModData(self.empTable, self.salTable, self.depTable, self.bonusTable, self.holsTable, self.salorHourlyTable)
+                report = report.employeePayReport(SoRP, EoRP)
+
+                salary = report[empID][2]
+                daysEmployeed = self.emp.empDaysemployedWithinDateRange(empID, SoRP, EoRP)
+                avgWeekPay = ( salary / daysEmployeed) * 7
+
+                #print('salary - RW.SPEC', salary)
+                #print('Days Employed -RW.SPEC', daysEmployeed)
+                #print('Avg Week Pay -RW.SPEC', avgWeekPay)
+                #print('Lower Earnings Limit - RW.SPEC', lowerEarningsLimit)
+                #print('emp Days Per week - RW.SPEC', empDaysPerWeek)
+                #print('QDs - RW.SPEC', QDs)
+                #print('Total Sick Pay - RW.SPEC', ((dayRate * 7) / empDaysPerWeek) * QDs)
+
+                # If average weekly wage over 8 week period is less than average Earnings limit, pass, otherwise
+                # calculate day rate according to number of days worked in week and * by qualifying days
+                # update relevant key in dictionary
+                if avgWeekPay > lowerEarningsLimit:
+                    QDEmpDict[empID][0] = ((dayRate * 7) / empDaysPerWeek) * QDs
+
+                else:
+                    pass
+        #print ('QD employee Dictionary - RW.SPEC', QDEmpDict)
+        total = 0
+        salariedTotal = 0
+        hourlyTotal = 0
+
+        for key, value in list(QDEmpDict.items()):
+            total += value[0]
+            if self.emp.empSalaryOrHourlyID(key) == 0:
+                salariedTotal += value[0]
+
+            else:
+                hourlyTotal += value[0]
+
+        return [QDEmpDict, total, salariedTotal, hourlyTotal]
+
+    def dateRangeListGenerator(self, startDate, endDate):
+            days = (endDate - startDate).days
+            dateRange = []
+            for D in xrange(days + 1):
+                dateRange.append(startDate + relativedelta(days=D))
+            return dateRange
+
 
     def calculateWageCostForDateRange(self, dateRange):
         dates = dateRange
-        SalariedTotal = 0
-        hourlyWageCost = 0
+        sickPayEmpDict = self.calculateQualifyingSickPeriodsInDateRange(dates)
+        SalariedTotal = sickPayEmpDict[2]
+        hourlyWageCost = sickPayEmpDict[3]
         nicCostTotal = 0
         bonusCost = 0
         pensionCostTotal = 0
@@ -806,9 +903,12 @@ class MainWindow(QtGui.QMainWindow):
         nicCostSalaried = 0
         pensionCostHourly = 0
         pensionCostSalaried = 0
+        SSPSalaried = sickPayEmpDict[2]
+        SSPHourly = sickPayEmpDict[3]
 
         payVar = payrollVariablePopUP.payrollVariablePopUp()
-        self.calculateQualifyingSickPeriodsInDateRange(dates)
+
+        msg = QtGui.QMessageBox()
 
         # calc salaried and Hourly + NIC cost for the period
         for x in xrange(len(dates)):
@@ -819,39 +919,44 @@ class MainWindow(QtGui.QMainWindow):
             rate = payVar.nicRate(dates[x])
             pensionPercent = payVar.pensionPecentage(dates[x])
 
-            # TODO: define list of employees by department, to remove Admin from CALC
-            # define employees in date range
-            empList = self.emp.salCalcEmpList(str(dates[x]), str(dates[x]))
+            print ( threshold, age, rate, pensionPercent)
+            if threshold is None or age is None or rate is None or pensionPercent is None:
+                msg.setText("Payroll Variable are not complete for this date range. Please update now")
+                msg.exec_()
+            else:
+                # TODO: define list of employees by department, to remove Admin from CALC
+                # define employees in date range
+                empList = self.emp.salCalcEmpList(str(dates[x]), str(dates[x]))
 
-            for y in xrange(len(empList)):
-                empID = empList[y][0]
-                shiftDate = dates[x]
-                shiftType = self.rotaData.empAMPMshiftTypeAtdate(empID, shiftDate)
-                SalariedShiftCost = self.emp.empShiftSalaryCost(shiftDate, shiftType, empID)
-                SalariedNicShiftCost = self.emp.empNicCostByShiftSalary(empID, shiftDate, threshold, age, rate)
-                shiftBonusCost = self.emp.empShiftBonusCost(shiftDate, empID)
-                HourlyTotalHours = self.rotaData.empTotalHoursDay(empID, shiftDate, 'day')
-                HourlyHourlyCost = self.emp.empShiftHourlyPay(shiftDate, empID)
-                HourlyNicShiftCost = self.emp.empNicCostByShiftHourly(empID, shiftDate, threshold, age, rate)
-                pensionCostHourly = self.emp.empHourlyPensionShiftCalc(empID, shiftDate, threshold, age, rate, pensionPercent)
-                pensionCostSalaried = self.emp.empSalaryPensionShiftCalc(empID, shiftDate, threshold, age, rate, pensionPercent)
+                for y in xrange(len(empList)):
+                    empID = empList[y][0]
+                    shiftDate = dates[x]
+                    shiftType = self.rotaData.empAMPMshiftTypeAtdate(empID, shiftDate)
+                    SalariedShiftCost = self.emp.empShiftSalaryCost_ExcludingSickDays(shiftDate, shiftType, empID)
+                    SalariedNicShiftCost = self.emp.empNicCostByShiftSalary(empID, shiftDate, threshold, age, rate)
+                    shiftBonusCost = self.emp.empShiftBonusCost(shiftDate, empID)
+                    HourlyTotalHours = self.rotaData.empTotalHoursDay(empID, shiftDate, 'day')
+                    HourlyHourlyCost = self.emp.empShiftHourlyPay(shiftDate, empID)
+                    HourlyNicShiftCost = self.emp.empNicCostByShiftHourly(empID, shiftDate, threshold, age, rate)
+                    pensionCostHourly = self.emp.empHourlyPensionShiftCalc(empID, shiftDate, threshold, age, rate, pensionPercent)
+                    pensionCostSalaried = self.emp.empSalaryPensionShiftCalc(empID, shiftDate, threshold, age, rate, pensionPercent)
+                    SalariedTotal += SalariedShiftCost
+                    nicCostTotal += (SalariedNicShiftCost + HourlyNicShiftCost)
+                    nicCostHourly += HourlyNicShiftCost
+                    nicCostSalaried += SalariedNicShiftCost
+                    bonusCost += shiftBonusCost
+                    try:
+                        hourlyWageCost += (HourlyTotalHours * HourlyHourlyCost)
+                    except StandardError:
+                        print ('No employees')
+                    pensionCostTotal += (pensionCostHourly + pensionCostSalaried)
 
-                SalariedTotal += SalariedShiftCost
-                nicCostTotal += (SalariedNicShiftCost + HourlyNicShiftCost)
-                nicCostHourly += HourlyNicShiftCost
-                nicCostSalaried += SalariedNicShiftCost
-                bonusCost += shiftBonusCost
-                try:
-                    hourlyWageCost += (HourlyTotalHours * HourlyHourlyCost)
-                except StandardError:
-                    print ('No employees')
-                pensionCostTotal += (pensionCostHourly + pensionCostSalaried)
+                    pensionCostHourly += pensionCostHourly
+                    pensionCostSalaried += pensionCostSalaried
 
-                pensionCostHourly += pensionCostHourly
-                pensionCostSalaried += pensionCostSalaried
-
-        return [SalariedTotal, hourlyWageCost, nicCostTotal, bonusCost, pensionCostTotal,
-                nicCostHourly, nicCostSalaried, pensionCostHourly, pensionCostSalaried]
+            return [SalariedTotal + SSPSalaried, hourlyWageCost + SSPHourly, nicCostTotal, bonusCost, pensionCostTotal,
+                    nicCostHourly, nicCostSalaried, pensionCostHourly, pensionCostSalaried, SSPSalaried, SSPHourly]
+    """
 
     def populateWeeklyWageInformation(self):
         # generate a list of dates within the selected week
@@ -859,67 +964,50 @@ class MainWindow(QtGui.QMainWindow):
         dateRange = []
         for x in xrange(0, NumDays):
             dateRange.append(self.selectedDate + datetime.timedelta(days=x))
+
         #Calculate the wage costs for the selected date range
-        wageData = self.calculateWageCostForDateRange(dateRange)
-        SalariedTotal = wageData[0]
-        hourlyWageCost = wageData[1]
-        nicCostTotal = wageData[2]
-        bonusCost = wageData[3]
-        pensionCostTotal = wageData[4]
-        nicCostHourly = wageData[5]
-        nicCostSalaried = wageData[6]
-        pensionCostHourly = wageData[7]
-        pensionCostSalaried = wageData[8]
-        predictedRevenueTotal = self.predictedRevenueTotalAction()
+        self.wageReport  = reporting.reportWindowui(self.shiftsTable)
+        self.wageReport.importEmpModData(self.empTable, self.salTable, self.depTable, self.bonusTable,
+                                            self.holsTable,
+                                            self.salorHourlyTable)
 
+        wageData = self.wageReport.calcWageCostforDateRange(dateRange[0], dateRange[-1], 0)
 
-        #print ('weekly', dateRange)
-        #print ('weekly', 'sal total', SalariedTotal)
-        #print ('weekly', 'hourly total', hourlyWageCost)
-        #print ('weekly', 'NIC total', nicCostTotal)
-        #print ('weekly', 'Bonus total', bonusCost)
-        #print ('weekly', 'Pension total', pensionCostTotal)
+        totalHourlyWages = wageData[3]
+        totalSalaryWages = wageData[4]
+        totalNetWages = wageData[5]
+        totalNIC = wageData[6]
+        totalBonus = wageData[7]
+        totalPension = wageData[8]
+        totalGrossSalary = wageData[9]
+        totalSSP = wageData[10]
 
-        # update wage box
-        self.ui.predWageBox.setValue(SalariedTotal + hourlyWageCost + nicCostTotal + bonusCost + pensionCostTotal)
-        self.ui.predBonusBox.setValue(bonusCost)
-        self.ui.predNICBox.setValue(nicCostTotal)
-        self.ui.predPensionBox.setValue(pensionCostTotal)
-        self.ui.predHourlyBox.setValue(hourlyWageCost + pensionCostHourly + nicCostHourly)
-        self.ui.predSalariedBox.setValue(SalariedTotal + pensionCostSalaried + nicCostSalaried + bonusCost)
+        self.ui.predWageBox.setValue(totalGrossSalary)
+        self.ui.predBonusBox.setValue(totalBonus)
+        self.ui.predNICBox.setValue(totalNIC)
+        self.ui.predPensionBox.setValue(totalPension)
+        self.ui.predHourlyBox.setValue(totalHourlyWages)
+        self.ui.predSalariedBox.setValue(totalSalaryWages)
+        self.ui.predSSPBox.setValue(totalSSP)
 
         # update wage %
+        predictedRevenueTotal = self.predictedRevenueTotalAction()
         if predictedRevenueTotal == 0:
             self.ui.predWagePercBox.setValue(0)
         else:
-            wageCostPercentage = ((hourlyWageCost + SalariedTotal + nicCostTotal + bonusCost +
-                         pensionCostTotal) / predictedRevenueTotal) * 100
+            wageCostPercentage = (totalGrossSalary / predictedRevenueTotal) * 100
             self.ui.predWagePercBox.setValue(wageCostPercentage)
 
-        print ('salried Wage cost', int(SalariedTotal), 'hourly wage cost', int(hourlyWageCost), 'nic cost',
-               int(nicCostTotal), 'bonus Cost', bonusCost, 'Pension Cost', pensionCostTotal)
-
     def populateMonthToDateWageInformation(self):
-
         dateRange = self.generateSelectedMonthDateRange()
         # Calculate the wage costs for the selected date range
-        wageData = self.calculateWageCostForDateRange(dateRange)
-        SalariedTotal = wageData[0]
-        hourlyWageCost = wageData[1]
-        nicCostTotal = wageData[2]
-        bonusCost = wageData[3]
-        pensionCostTotal = wageData[4]
 
-        #print ('MTD', dateRange)
-        #print ('MTD', 'sal total', SalariedTotal)
-        #print ('MTD', 'hourly total', hourlyWageCost)
-        #print ('MTD', 'NIC total', nicCostTotal)
-        #print ('MTD', 'Bonus total', bonusCost)
-        #print ('MTD', 'Pension total', pensionCostTotal)
+        wageData = self.wageReport.calcWageCostforDateRange(dateRange[0], dateRange[-1], 0)
+
+        totalGrossSalary = wageData[9]
 
         # update wage box
-        wageCostTotal = SalariedTotal + hourlyWageCost + nicCostTotal + bonusCost + pensionCostTotal
-        self.ui.mtdWageBox.setValue(wageCostTotal)
+        self.ui.mtdWageBox.setValue(totalGrossSalary)
 
         # populate wage percentage and mtd Rev
         revWindow = ActualRevWindow.ActualRevWindow(self.selectedDate)
@@ -929,7 +1017,7 @@ class MainWindow(QtGui.QMainWindow):
 
         self.ui.mtdRevBox.setValue(revenueTotal)
         try:
-            wageCostPercentage = (wageCostTotal / revenueTotal) * 100
+            wageCostPercentage = (totalGrossSalary / revenueTotal) * 100
             self.ui.mtdWagePercBox.setValue(wageCostPercentage)
             self.ui.mtdAvgSpendBox.setValue(revenueTotal / self.MTDCoversTotal)
         except ZeroDivisionError:
@@ -985,7 +1073,7 @@ class MainWindow(QtGui.QMainWindow):
 
         # if the cell that is selected is a monday update the shift with blank information to prevent the deletion of the
         # employee from the rota
-        print ('Rw.py delShift shifts to delete', shiftsToDelete)
+        #print ('Rw.py delShift shifts to delete', shiftsToDelete)
         for a in xrange(len(shiftsToDelete)):
             if datetime.datetime.strptime(shiftsToDelete[a][1], '%Y-%m-%d').weekday() == 0:
                 insertblankmonday = ShiftPopUp.ShiftPopUp(shiftsToDelete[a][3], shiftsToDelete[a][2], self.dateList, self.results2, self.shiftTypes, self.departments, shiftsToDelete[a][0])
@@ -1027,12 +1115,20 @@ class MainWindow(QtGui.QMainWindow):
 
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
+    # add splash screen when ready and a wait timer
+    SplashPix = QtGui.QPixmap('')
+    loadingSplash = QtGui.QSplashScreen(SplashPix, QtCore.Qt.WindowStaysOnTopHint)
+    loadingSplash.setMask(SplashPix.mask())
+    loadingSplash.show()
+    app.processEvents()
 
     # just hack this out
     myapp = MainWindow()
     myapp.show()
+
     # resize rows for rota widget to include the shift type name
     myapp.ui.tableWidget.resizeRowsToContents()
+    loadingSplash.finish(myapp)
 
     sys.exit(app.exec_())
     # to here, and un-comment bellow

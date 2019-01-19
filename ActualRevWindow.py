@@ -98,7 +98,7 @@ class ActualRevWindow(QtGui.QDialog):
         pmTotal = 0
         self.MTDTotal = 0
 
-        print('data', data)
+        #print('data', data)
         for day in range(len(data)):
             # if actual rev is 0 then use predicitive figure (if it exists)
             if data[day][1] + data[day][2] == 0:
@@ -107,7 +107,7 @@ class ActualRevWindow(QtGui.QDialog):
                 pmTotal += predRevTotal[2]
                 self.MTDTotal += predRevTotal[1] + predRevTotal[2]
             else:
-                print(data[day][1], data[day][2])
+                #print(data[day][1], data[day][2])
                 amTotal += data[day][1]
                 pmTotal += data[day][2]
                 self.MTDTotal += data[day][1] + data[day][2]

@@ -2,7 +2,7 @@
 import cProfile
 import datetime
 import calendar
-from PyQt4 import QtCore
+from PyQt4 import QtCore, QtGui
 from calendar import monthrange
 import payrollVariablePopUP
 import RotaData
@@ -151,7 +151,7 @@ class employees:
 
         return daysInMonth
 
-    def empShiftSalaryCost(self, shiftDate, shiftType, empID):
+    def empShiftSalaryCost_ExcludingSickDays(self, shiftDate, shiftType, empID):
         #TODO: need to work out a mechanism that deals with different working paterns ie. 3 days per week not 5
         #TODO: finish the shift type controls ie Work vs Holiday vs MAT PAY
         #TODO: Build in a department function ie if 0 is selected count all, if 1 is selected count all ex ADMIN
@@ -182,7 +182,7 @@ class employees:
             elif shiftType[0] == 2: # Holiday
                 daySum += standardShift # if allowance has been used at this date then 0 else standard week
             elif shiftType[0] == 3: # Sick
-                daySum += standardShift
+                daySum += 0
             elif shiftType[0] == 4: # On-Call
                 daySum += standardShift
             elif shiftType[0] == 5: # Unavailable
@@ -202,7 +202,7 @@ class employees:
             elif shiftType[1] == 2: # Holiday
                 daySum += standardShift # if allowance has been used at this date then 0 else standard week
             elif shiftType[1] == 3: # Sick
-                daySum += standardShift
+                daySum += 0
             elif shiftType[1] == 4: # On-Call
                 daySum += standardShift
             elif shiftType[1] == 5: # Unavailable
@@ -215,33 +215,6 @@ class employees:
                 print('ERROR - unknown / missing shift Type in emp.empShiftSalaryCost calculation' )
 
             return daySum
-
-    def sickPayEntitlementCalc(self, shiftDate, empID):
-        payrollVariables = payrollVariablePopUP.payrollVariablePopUp()
-        self.shiftsTable = DB.Querydb("""SELECT * FROM shifts""", None).fetchAllRecordswithFormatting()
-        empID = empID
-        rotaData = RotaData.rota(self.shiftsTable)
-        dayRate = payrollVariables.sickPayDayRate(shiftDate)
-        QDs = []
-        avgWeekPay = 0
-        lowerEarningsLimit = payrollVariables.SSPLowerEarningsLimit(shiftDate)
-
-        # Calculate End of relative period ie the last pay day before first day of sickness
-        firstQualifyingDate = datetime.date(2018, 1, 1)
-        EoRP_previousMonth = firstQualifyingDate + relativedelta(months=-1)
-        EoRP_last_friday = max(
-            week[calendar.FRIDAY] for week in calendar.monthcalendar(EoRP_previousMonth.year, EoRP_previousMonth.month))
-        EoRP = datetime.date(EoRP_previousMonth.year, EoRP_previousMonth.month, EoRP_last_friday)
-
-        # Calculate the Start of the relative period being no less than 8 weeks before EoRP
-        EoRPLess8Weeks = EoRP + relativedelta(weeks=-8)
-        SoRP_previousMonth = EoRPLess8Weeks + relativedelta(months=-1)
-        SoRP_last_friday = max(
-            week[calendar.FRIDAY] for week in calendar.monthcalendar(SoRP_previousMonth.year, SoRP_previousMonth.month))
-        SoRP = datetime.date(SoRP_previousMonth.year, SoRP_previousMonth.month, SoRP_last_friday)
-
-        print("SoRP", SoRP)
-        print('EoRP', EoRP)
 
     def empShiftHourlyPay(self, shiftDate, empID):
         hourly = []
@@ -298,7 +271,7 @@ class employees:
         else:
             data = [[adjustDate, entitlement] for holsID, ID, entitlement, adjustDate in
                     self.__holsTable if ID == empID and adjustDate <= date]
-            print ('holiday entitlement at Date', max(data)[1])
+            #print ('holiday entitlement at Date', max(data)[1])
             return max(data)[1]
 
     def empSalaries(self, empID):
@@ -330,6 +303,19 @@ class employees:
             else:
                 return False
 
+    def empIsDateAContractedDay(self, empID, date):
+        if self.__empTable is ():
+            return None
+        else:
+            data = [(QDm, QDt, QDw, QDth, QDf, QDs, QDsu) for
+                    ID, name, DOB, Dep, sal, adr, email, Hphone, Mphone, empSD, empFD, empCAD, QDm, QDt, QDw, QDth, QDf, QDs, QDsu
+                    in self.__empTable if ID == empID][0]
+
+            if data[date.weekday()] is 1:
+                return True
+            else:
+                return False
+
     def empRecord(self, empID):
         if self.__empTable is ():
             return None
@@ -346,17 +332,26 @@ class employees:
         else:
             data = [name for ID, name, DOB, Dep, sal, adr, email, Hphone, Mphone, empSD, empFD, empCAD, QDm, QDt, QDw, QDth,
                              QDf, QDs, QDsu in self.__empTable if
-                     ID == empID][0]
-            return data
+                     ID == empID]
+
+            if data == []:
+                print ('No Employee Data for Range ')
+                return ""
+            else:
+                return data[0]
+
 
     def empDOB(self, empID):
         if self.__empTable is ():
             return QtCore.QDate.fromString('1980-01-01', 'yyyy-M-d')
         else:
             data = [DOB for ID, name, DOB, Dep, sal, adr, email, Hphone, Mphone, empSD, empFD, empCAD, QDm, QDt, QDw, QDth,
-                            QDf, QDs, QDsu in self.__empTable if
-                     ID == empID][0]
-            return data
+                         QDf, QDs, QDsu in self.__empTable if ID == empID]
+
+            if data == []:
+                return QtCore.QDate.fromString('1980-01-01', 'yyyy-M-d')
+            else:
+                return data[0]
 
     def empID(self, empName):
         if self.__empTable is ():
@@ -364,8 +359,11 @@ class employees:
         else:
             data = [ID for ID, name, DOB, Dep, sal, adr, email, Hphone, Mphone, empSD, empFD, empCAD, QDm, QDt, QDw, QDth,
                            QDf, QDs, QDsu in self.__empTable if
-                     name == empName][0]
-            return data
+                     name == empName]
+            if data == []:
+                return None
+            else:
+                return data[0]
 
     def empDepID(self, empID):
         if self.__empTable is ():
@@ -373,8 +371,12 @@ class employees:
         else:
             data = [DepID for ID, name, DOB, DepID, salID, adr, email, Hphone, Mphone, empSD, empFD, empCAD, QDm, QDt,
                               QDw, QDth, QDf, QDs, QDsu in self.__empTable if
-                    ID == empID][0]
-            return data
+                    ID == empID]
+            if data == []:
+                return None
+            else:
+                return data[0]
+
 
     def empDepName(self, empID):
         if self.__empTable is ():
@@ -392,8 +394,12 @@ class employees:
         else:
             data = [salID for ID, name, DOB, DepID, salID, adr, email, Hphone, Mphone, empSD, empFD, empCAD, QDm, QDt,
                               QDw, QDth, QDf, QDs, QDsu in self.__empTable if
-                     ID == empID][0]
-            return data
+                     ID == empID]
+            if data == []:
+                return None
+            else:
+                return data[0]
+
 
     def empSalaryOrHourlyName(self, empID):
         if self.__empTable is ():
@@ -411,8 +417,12 @@ class employees:
         else:
             data = [adr for ID, name, DOB, Dep, sal, adr, email, Hphone, Mphone, empSD, empFD, empCAD, QDm, QDt, QDw, QDth,
                             QDf, QDs, QDsu in self.__empTable if
-                     ID == empID][0]
-            return data
+                     ID == empID]
+            if data == []:
+                return ""
+            else:
+                return data[0]
+
 
     def empEmail(self, empID):
         if self.__empTable is ():
@@ -420,8 +430,11 @@ class employees:
         else:
             data = [email for ID, name, DOB, Dep, sal, adr, email, Hphone, Mphone, empSD, empFD, empCAD, QDm, QDt,
                               QDw, QDth, QDf, QDs, QDsu in self.__empTable if
-                     ID == empID][0]
-            return data
+                     ID == empID]
+            if data == []:
+                return ""
+            else:
+                return data[0]
 
     def empHphone(self, empID):
         if self.__empTable is ():
@@ -429,8 +442,11 @@ class employees:
         else:
             data = [Hphone for ID, name, DOB, Dep, sal, adr, email, Hphone, Mphone, empSD, empFD, empCAD, QDm, QDt,
                                QDw, QDth, QDf, QDs, QDsu in self.__empTable if
-                     ID == empID][0]
-            return data
+                     ID == empID]
+            if data == []:
+                return ""
+            else:
+                return data[0]
 
     def empMphone(self, empID):
         if self.__empTable is ():
@@ -438,8 +454,11 @@ class employees:
         else:
             data = [Mphone for ID, name, DOB, Dep, sal, adr, email, Hphone, Mphone, empSD, empFD, empCAD, QDm, QDt,
                                QDw, QDth, QDf, QDs, QDsu in self.__empTable if
-                     ID == empID][0]
-            return data
+                     ID == empID]
+            if data == []:
+                return ""
+            else:
+                return data[0]
 
     def empStartDate(self, empID):
         if self.__empTable is ():
@@ -447,8 +466,11 @@ class employees:
         else:
             data = [empSD for ID, name, DOB, Dep, sal, adr, email, Hphone, Mphone, empSD, empFD, empCAD, QDm, QDt,
                               QDw, QDth, QDf, QDs, QDsu in self.__empTable if
-                      ID == empID][0]
-            return data
+                      ID == empID]
+            if data == []:
+                return datetime.date.today()
+            else:
+                return data[0]
 
     def empFinishDate(self, empID):
         if self.__empTable is ():
@@ -456,8 +478,11 @@ class employees:
         else:
             data = [empFD for ID, name, DOB, Dep, sal, adr, email, Hphone, Mphone, empSD, empFD, empCAD, QDm, QDt,
                               QDw, QDth, QDf, QDs, QDsu in self.__empTable if
-                      ID == empID][0]
-            return data
+                      ID == empID]
+            if data == []:
+                return datetime.date.today()
+            else:
+                return data[0]
 
     def empAge(self, empID, todayDate):
         if self.__empTable is ():
@@ -527,3 +552,13 @@ class employees:
             else:
                 return  False
 
+
+    def empDaysemployedWithinDateRange(self, empID, startDate, endDate):
+        days = (endDate - startDate).days
+        dateRange = []
+        for D in xrange(days+1):
+            if self.empStartDate(empID) <= startDate + relativedelta(days=D):
+                dateRange.append(startDate + relativedelta(days=D))
+            else:
+                pass
+        return len(dateRange)

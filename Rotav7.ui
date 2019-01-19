@@ -825,6 +825,44 @@
                <bool>false</bool>
               </property>
               <layout class="QGridLayout" name="gridLayout">
+               <item row="1" column="0">
+                <widget class="QLabel" name="predBonuslbl">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>90</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Pred. Bonus</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="predPensionlbl">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>90</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Pred. Pension</string>
+                 </property>
+                </widget>
+               </item>
                <item row="1" column="1">
                 <widget class="QDoubleSpinBox" name="predBonusBox">
                  <property name="minimumSize">
@@ -856,41 +894,34 @@
                  </property>
                 </widget>
                </item>
-               <item row="0" column="0">
-                <widget class="QLabel" name="predPensionlbl">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
+               <item row="0" column="1">
+                <widget class="QDoubleSpinBox" name="predPensionBox">
+                 <property name="minimumSize">
+                  <size>
+                   <width>79</width>
+                   <height>18</height>
+                  </size>
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>90</width>
-                   <height>16777215</height>
+                   <width>79</width>
+                   <height>18</height>
                   </size>
                  </property>
-                 <property name="text">
-                  <string>Pred. Pension</string>
+                 <property name="readOnly">
+                  <bool>true</bool>
                  </property>
-                </widget>
-               </item>
-               <item row="2" column="0">
-                <widget class="QLabel" name="predNIClbl">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
+                 <property name="buttonSymbols">
+                  <enum>QAbstractSpinBox::NoButtons</enum>
                  </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>90</width>
-                   <height>16777215</height>
-                  </size>
+                 <property name="prefix">
+                  <string>£</string>
                  </property>
-                 <property name="text">
-                  <string>Pred. NIC</string>
+                 <property name="decimals">
+                  <number>0</number>
+                 </property>
+                 <property name="maximum">
+                  <double>9999.000000000000000</double>
                  </property>
                 </widget>
                </item>
@@ -925,7 +956,7 @@
                  </property>
                 </widget>
                </item>
-               <item row="3" column="1">
+               <item row="4" column="1">
                 <spacer name="verticalSpacer">
                  <property name="orientation">
                   <enum>Qt::Vertical</enum>
@@ -938,8 +969,27 @@
                  </property>
                 </spacer>
                </item>
-               <item row="0" column="1">
-                <widget class="QDoubleSpinBox" name="predPensionBox">
+               <item row="2" column="0">
+                <widget class="QLabel" name="predNIClbl">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>90</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Pred. NIC</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QDoubleSpinBox" name="predSSPBox">
                  <property name="minimumSize">
                   <size>
                    <width>79</width>
@@ -948,7 +998,7 @@
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>79</width>
+                   <width>16777215</width>
                    <height>18</height>
                   </size>
                  </property>
@@ -964,27 +1014,12 @@
                  <property name="decimals">
                   <number>0</number>
                  </property>
-                 <property name="maximum">
-                  <double>9999.000000000000000</double>
-                 </property>
                 </widget>
                </item>
-               <item row="1" column="0">
-                <widget class="QLabel" name="predBonuslbl">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>90</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
+               <item row="3" column="0">
+                <widget class="QLabel" name="PredSSPlbl">
                  <property name="text">
-                  <string>Pred. Bonus</string>
+                  <string>Pred. SSP</string>
                  </property>
                 </widget>
                </item>
@@ -996,6 +1031,8 @@
               <zorder>predPensionlbl</zorder>
               <zorder>predPensionBox</zorder>
               <zorder>verticalSpacer</zorder>
+              <zorder>predSSPBox</zorder>
+              <zorder>PredSSPlbl</zorder>
              </widget>
             </item>
             <item row="4" column="0">
