@@ -1,0 +1,11 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>images/dot.png</file>
+    <file>images/left.png</file>
+    <file>images/Lleft.png</file>
+    <file>images/right.png</file>
+    <file>images/Rright.png</file>
+    <file>images/splash.png</file>
+</qresource>
+</RCC>
+

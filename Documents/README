@@ -26,3 +26,5 @@ pr.enable()
 call_function()
 pr.disable()
 pr.print_stats(sort='time')
+
+use import with pyrcc4 -o images.py images.qrc to update resource file

@@ -5,17 +5,60 @@
     <option name="CUSTOM_SCOPE_NAME" value="Module 'RotaSystem_v2'" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="732f080e-e850-4105-ab94-043bb3bbd996" name="Default" comment="-Moved two one wage calc module in reporting">
+    <list default="true" id="732f080e-e850-4105-ab94-043bb3bbd996" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/Core.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/GUIs.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/QtUis/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images.qrc" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/Documents/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/phil.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/phil.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/ActualRevWindow.py" afterPath="$PROJECT_DIR$/ActualRevWindow.py" />
-      <change beforePath="$PROJECT_DIR$/Employees.py" afterPath="$PROJECT_DIR$/Employees.py" />
-      <change beforePath="$PROJECT_DIR$/RotaData.py" afterPath="$PROJECT_DIR$/RotaData.py" />
-      <change beforePath="$PROJECT_DIR$/RotaWindow.py" afterPath="$PROJECT_DIR$/RotaWindow.py" />
-      <change beforePath="$PROJECT_DIR$/Rotav7.py" afterPath="$PROJECT_DIR$/Rotav7.py" />
-      <change beforePath="$PROJECT_DIR$/Rotav7.ui" afterPath="$PROJECT_DIR$/Rotav7.ui" />
-      <change beforePath="$PROJECT_DIR$/payrollVariablePopUP.py" afterPath="$PROJECT_DIR$/payrollVariablePopUP.py" />
-      <change beforePath="$PROJECT_DIR$/reporting.py" afterPath="$PROJECT_DIR$/reporting.py" />
-      <change beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
+      <change beforePath="$PROJECT_DIR$/ActualRevWindow.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/AddEmployeeUI.py" afterPath="$PROJECT_DIR$/QtUis/AddEmployeeWindowUI.py" />
+      <change beforePath="$PROJECT_DIR$/AddEmployeeUI.ui" afterPath="$PROJECT_DIR$/QtUis/AddEmployeeWindowUI.ui" />
+      <change beforePath="$PROJECT_DIR$/AddEmployeeWindow.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DB.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/EmployeeInfoEntry.ui" afterPath="$PROJECT_DIR$/QtUis/EmployeeInfoEntry.ui" />
+      <change beforePath="$PROJECT_DIR$/EmployeePopUp.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/EmployeeinfoEntry.py" afterPath="$PROJECT_DIR$/QtUis/EmployeeinfoEntry.py" />
+      <change beforePath="$PROJECT_DIR$/Employees.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Lleft.png" afterPath="$PROJECT_DIR$/images/Lleft.png" />
+      <change beforePath="$PROJECT_DIR$/LogMeIn.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Printing.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/README" afterPath="$PROJECT_DIR$/Documents/README" />
+      <change beforePath="$PROJECT_DIR$/RotaData.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/RotaWindow.py" afterPath="$PROJECT_DIR$/RotaMain.py" />
+      <change beforePath="$PROJECT_DIR$/Rotav7.py" afterPath="$PROJECT_DIR$/QtUis/Rotav7.py" />
+      <change beforePath="$PROJECT_DIR$/Rotav7.ui" afterPath="$PROJECT_DIR$/QtUis/Rotav7.ui" />
+      <change beforePath="$PROJECT_DIR$/Rright.png" afterPath="$PROJECT_DIR$/images/Rright.png" />
+      <change beforePath="$PROJECT_DIR$/ShiftPopUp.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ShiftPopUpWindow.py" afterPath="$PROJECT_DIR$/QtUis/ShiftPopUpWindow.py" />
+      <change beforePath="$PROJECT_DIR$/ShiftPopUpWindow.ui" afterPath="$PROJECT_DIR$/QtUis/ShiftPopUpWindow.ui" />
+      <change beforePath="$PROJECT_DIR$/TimePad.py" afterPath="$PROJECT_DIR$/QtUis/TimePad.py" />
+      <change beforePath="$PROJECT_DIR$/TimePad.ui" afterPath="$PROJECT_DIR$/QtUis/TimePad.ui" />
+      <change beforePath="$PROJECT_DIR$/TimePadPopUp.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/actualRevUI.py" afterPath="$PROJECT_DIR$/QtUis/actualRevWindowUI.py" />
+      <change beforePath="$PROJECT_DIR$/actualRevUI.ui" afterPath="$PROJECT_DIR$/QtUis/actualRevWindowUI.ui" />
+      <change beforePath="$PROJECT_DIR$/dot.png" afterPath="$PROJECT_DIR$/images/dot.png" />
+      <change beforePath="$PROJECT_DIR$/left.png" afterPath="$PROJECT_DIR$/images/left.png" />
+      <change beforePath="$PROJECT_DIR$/loginwindow.py" afterPath="$PROJECT_DIR$/QtUis/loginwindow.py" />
+      <change beforePath="$PROJECT_DIR$/loginwindow.ui" afterPath="$PROJECT_DIR$/QtUis/loginwindow.ui" />
+      <change beforePath="$PROJECT_DIR$/payrollVariablePopUP.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/payrollVariableUI.py" afterPath="$PROJECT_DIR$/QtUis/payrollVariableUI.py" />
+      <change beforePath="$PROJECT_DIR$/payrollVariableUI.ui" afterPath="$PROJECT_DIR$/QtUis/payrollVariableUI.ui" />
+      <change beforePath="$PROJECT_DIR$/payrollVariables.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/payrollVariablesUI.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/print.pdf" afterPath="$PROJECT_DIR$/Documents/print.pdf" />
+      <change beforePath="$PROJECT_DIR$/removedBudgetForm.ui" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reportWindow.py" afterPath="$PROJECT_DIR$/QtUis/reportWindow.py" />
+      <change beforePath="$PROJECT_DIR$/reportWindow.ui" afterPath="$PROJECT_DIR$/QtUis/reportWindow.ui" />
+      <change beforePath="$PROJECT_DIR$/reporting.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/right.png" afterPath="$PROJECT_DIR$/images/right.png" />
+      <change beforePath="$PROJECT_DIR$/salary.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/script_to_profile.py" afterPath="$PROJECT_DIR$/DBData.py" />
+      <change beforePath="$PROJECT_DIR$/script_to_profile.py.lprof" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test.py" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -100,81 +143,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RotaWindow.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/RotaWindow.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="377" column="9" lean-forward="false" selection-start-line="377" selection-start-column="9" selection-end-line="377" selection-end-column="9" />
-              <folding>
-                <element signature="e#21#36#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reporting.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reporting.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2775">
-              <caret line="195" column="0" lean-forward="false" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-                <marker date="1547846514621" expanded="true" signature="1912:2324" ph="..." />
-                <marker date="1547846514621" expanded="true" signature="2421:14690" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActualRevWindow.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ActualRevWindow.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1410">
-              <caret line="100" column="14" lean-forward="false" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.py">
+      <file leaf-file-name="DBData.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBData.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="13" column="9" lean-forward="false" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+              <caret line="633" column="0" lean-forward="false" selection-start-line="633" selection-start-column="0" selection-end-line="633" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Employees.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Employees.py">
+      <file leaf-file-name="Core.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Core.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7110">
-              <caret line="482" column="44" lean-forward="false" selection-start-line="482" selection-start-column="44" selection-end-line="482" selection-end-column="44" />
+            <state relative-caret-position="-495">
+              <caret line="427" column="24" lean-forward="true" selection-start-line="427" selection-start-column="24" selection-end-line="427" selection-end-column="24" />
               <folding>
-                <element signature="e#18#33#0" expanded="true" />
-                <marker date="1547509679630" expanded="true" signature="19885:19891" ph="..." />
+                <element signature="e#0#31#0" expanded="true" />
+                <element signature="e#65334#65571#0" expanded="false" />
+                <element signature="e#66455#66692#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="payrollVariablePopUP.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/payrollVariablePopUP.py">
+      <file leaf-file-name="GUIs.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GUIs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="22" column="52" lean-forward="false" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DB.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DB.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1515">
-              <caret line="102" column="8" lean-forward="false" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="8" />
-              <folding />
+            <state relative-caret-position="105">
+              <caret line="2425" column="0" lean-forward="false" selection-start-line="2425" selection-start-column="0" selection-end-line="2425" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#1619#4134#0" expanded="false" />
+                <element signature="e#4184#5016#0" expanded="false" />
+                <element signature="e#5066#5724#0" expanded="false" />
+                <element signature="e#5939#6408#0" expanded="false" />
+                <element signature="e#6446#6503#0" expanded="false" />
+                <element signature="e#6549#6627#0" expanded="false" />
+                <element signature="e#6673#6746#0" expanded="false" />
+                <element signature="e#6797#6897#0" expanded="false" />
+                <element signature="e#6940#8755#0" expanded="false" />
+                <element signature="e#8804#9228#0" expanded="false" />
+                <element signature="e#9281#9363#0" expanded="false" />
+                <element signature="e#9543#10665#0" expanded="false" />
+                <element signature="e#10716#10966#0" expanded="false" />
+                <element signature="e#11004#11102#0" expanded="false" />
+                <element signature="e#11140#11239#0" expanded="false" />
+                <element signature="e#11284#12641#0" expanded="false" />
+                <element signature="e#12690#13102#0" expanded="false" />
+                <element signature="e#13148#13347#0" expanded="false" />
+                <element signature="e#13391#13824#0" expanded="false" />
+                <element signature="e#13872#14700#0" expanded="false" />
+                <element signature="e#14757#14841#0" expanded="false" />
+                <element signature="e#14901#16962#0" expanded="false" />
+                <element signature="e#17012#19200#0" expanded="false" />
+                <element signature="e#19244#19362#0" expanded="false" />
+                <element signature="e#19412#19716#0" expanded="false" />
+                <element signature="e#19763#20000#0" expanded="false" />
+                <element signature="e#20043#20118#0" expanded="false" />
+                <element signature="e#20158#20991#0" expanded="false" />
+                <element signature="e#21046#21265#0" expanded="false" />
+                <element signature="e#21315#24191#0" expanded="false" />
+                <element signature="e#24238#24834#0" expanded="false" />
+                <element signature="e#27403#27672#0" expanded="false" />
+                <element signature="e#27705#28209#0" expanded="false" />
+                <element signature="e#28244#30512#0" expanded="false" />
+                <element signature="e#30549#31119#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -190,36 +225,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Duplicate key</find>
-      <find>revenue</find>
-      <find>predicted</find>
-      <find>isinstanc</find>
-      <find>revType</find>
-      <find>self.ui.mtdRev</find>
+      <find>ca</find>
+      <find>time</find>
+      <find>timer</find>
+      <find>id</find>
+      <find>DBaccess</find>
+      <find>DBAccess.</find>
+      <find>DBaccess.</find>
+      <find>reportWindowui</find>
+      <find>xrange</find>
+      <find>SelectionList</find>
+      <find>.ui.</find>
+      <find>Querydb</find>
+      <find>sal</find>
+      <find>selected</find>
+      <find>dateList</find>
+      <find>salarycal</find>
+      <find>NMW</find>
+      <find>convertDB</find>
+      <find>importEm</find>
+      <find>Rota</find>
+      <find>MTD</find>
+      <find>coversTot</find>
       <find>png</find>
-      <find>data from DB</find>
-      <find>self.ui.mtd</find>
-      <find>Data from DB</find>
-      <find>tab</find>
-      <find>self.ui.tab</find>
-      <find>pred rev</find>
-      <find>calendar</find>
-      <find>try</find>
-      <find>sala</find>
-      <find>payroll</find>
-      <find>shiftsTable</find>
-      <find>relative</find>
-      <find>print ('month</find>
-      <find>print (&quot;emp ID</find>
-      <find>print ('month C</find>
-      <find>.form</find>
-      <find>genera</find>
-      <find>employeepop</find>
-      <find>strf</find>
-      <find>messa</find>
-      <find>strftime</find>
-      <find>wage data</find>
+      <find>populateCovers</find>
+      <find>covers</find>
       <find>print</find>
+      <find>rota</find>
+      <find>salary</find>
+      <find>self.emp</find>
+      <find>emp</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -227,31 +262,54 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="GUI_Seperation" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/AccessDB.py" />
-        <option value="$PROJECT_DIR$/DBUpdate.py" />
-        <option value="$PROJECT_DIR$/CreateEmployee.py" />
-        <option value="$PROJECT_DIR$/DBCreateTable.py" />
         <option value="$PROJECT_DIR$/DBConnect.py" />
         <option value="$PROJECT_DIR$/Data" />
         <option value="$PROJECT_DIR$/testdatamanipulation.py" />
         <option value="$PROJECT_DIR$/DataV2.py" />
         <option value="$PROJECT_DIR$/venv/Login.py" />
         <option value="$PROJECT_DIR$/InsertRecords.py" />
-        <option value="$PROJECT_DIR$/Rota.py" />
         <option value="$PROJECT_DIR$/Employee.py" />
         <option value="$PROJECT_DIR$/venv/HTMLDelegate.py" />
-        <option value="$PROJECT_DIR$/AddEmployeeWindow.py" />
         <option value="$PROJECT_DIR$/venv/EmployeePopUp.py" />
         <option value="$PROJECT_DIR$/employeeData.py" />
         <option value="$PROJECT_DIR$/HTMLDelegate.py" />
         <option value="$PROJECT_DIR$/venv/RotaData.py" />
         <option value="$PROJECT_DIR$/Rotav6.py" />
-        <option value="$PROJECT_DIR$/TimePadPopUp.py" />
-        <option value="$PROJECT_DIR$/Printing.py" />
         <option value="$PROJECT_DIR$/DataV3.py" />
         <option value="$PROJECT_DIR$/BusyIndicator.py" />
         <option value="$PROJECT_DIR$/profile_test.py" />
@@ -260,26 +318,43 @@
         <option value="$PROJECT_DIR$/README" />
         <option value="$PROJECT_DIR$/salary.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/ShiftPopUp.py" />
-        <option value="$PROJECT_DIR$/DB.py" />
         <option value="$PROJECT_DIR$/WidgetTools.py" />
-        <option value="$PROJECT_DIR$/LogMeIn.py" />
-        <option value="$PROJECT_DIR$/EmployeePopUp.py" />
-        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/RotaData.py" />
-        <option value="$PROJECT_DIR$/ActualRevWindow.py" />
-        <option value="$PROJECT_DIR$/payrollVariablePopUP.py" />
         <option value="$PROJECT_DIR$/Employees.py" />
+        <option value="$PROJECT_DIR$/tab.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/reportWindow.py" />
+        <option value="$PROJECT_DIR$/QtUis/actualRevWindowUI.py" />
+        <option value="$PROJECT_DIR$/ActualRevWindow.py" />
+        <option value="$PROJECT_DIR$/AddEmployeeWindow.py" />
+        <option value="$PROJECT_DIR$/payrollVariablePopUP.py" />
+        <option value="$PROJECT_DIR$/ShiftPopUp.py" />
+        <option value="$PROJECT_DIR$/TimePadPopUp.py" />
         <option value="$PROJECT_DIR$/reporting.py" />
+        <option value="$PROJECT_DIR$/EmployeePopUp.py" />
+        <option value="$PROJECT_DIR$/Printing.py" />
+        <option value="$PROJECT_DIR$/LogMeIn.py" />
+        <option value="$PROJECT_DIR$/Data.py" />
+        <option value="$PROJECT_DIR$/Main.py" />
+        <option value="$PROJECT_DIR$/DB.py" />
+        <option value="$PROJECT_DIR$/Rota.py" />
         <option value="$PROJECT_DIR$/RotaWindow.py" />
+        <option value="$PROJECT_DIR$/RotaMain.py" />
+        <option value="$PROJECT_DIR$/DBAccess.py" />
+        <option value="$PROJECT_DIR$/core.py" />
+        <option value="$PROJECT_DIR$/resource.qrc" />
+        <option value="$PROJECT_DIR$/Documents/README" />
+        <option value="$PROJECT_DIR$/images.qrc" />
+        <option value="$PROJECT_DIR$/DBData.py" />
+        <option value="$PROJECT_DIR$/Core.py" />
+        <option value="$PROJECT_DIR$/GUIs.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="401" />
-    <option name="y" value="16" />
-    <option name="width" value="991" />
-    <option name="height" value="857" />
+    <option name="y" value="86" />
+    <option name="width" value="1594" />
+    <option name="height" value="869" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -321,7 +396,7 @@
         </expanded-state>
         <selected-state>
           <State>
-            <id>PyCompatibilityInspection</id>
+            <id>PyAttributeOutsideInitInspection</id>
           </State>
         </selected-state>
       </profile-state>
@@ -342,6 +417,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -352,28 +428,18 @@
             <path>
               <item name="RotaSystem_v6" type="b2602c69:ProjectViewProjectNode" />
               <item name="RotaSystem_v6" type="462c0819:PsiDirectoryNode" />
-              <item name="Employees.py" type="8704e2dd:PyFileNode" />
+              <item name="Core.py" type="8704e2dd:PyFileNode" />
             </path>
             <path>
               <item name="RotaSystem_v6" type="b2602c69:ProjectViewProjectNode" />
               <item name="RotaSystem_v6" type="462c0819:PsiDirectoryNode" />
-              <item name="reporting.py" type="8704e2dd:PyFileNode" />
-            </path>
-            <path>
-              <item name="RotaSystem_v6" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RotaSystem_v6" type="462c0819:PsiDirectoryNode" />
-              <item name="RotaData.py" type="8704e2dd:PyFileNode" />
-            </path>
-            <path>
-              <item name="RotaSystem_v6" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RotaSystem_v6" type="462c0819:PsiDirectoryNode" />
-              <item name="RotaWindow.py" type="8704e2dd:PyFileNode" />
+              <item name="Core.py" type="8704e2dd:PyFileNode" />
+              <item name="Rota" type="dd8bbb05:PyElementNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -395,10 +461,14 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Done" />
+      <recent name="$PROJECT_DIR$/QtUis" />
+      <recent name="$PROJECT_DIR$/Documents" />
+      <recent name="$PROJECT_DIR$/Qt_UI_to_Py_Files" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -414,8 +484,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.DataV3">
-    <configuration name="DataV3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Launch Rota">
+    <configuration name="Core" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -427,13 +497,13 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="RotaSystem_v2" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RotaWindow.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Core.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="EmployeePopUp" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="DBData" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -445,13 +515,13 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="RotaSystem_v2" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/EmployeePopUp.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DBData.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="Employees" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Launch Rota" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -463,7 +533,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="RotaSystem_v2" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Employees.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RotaMain.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -481,7 +551,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="RotaSystem_v2" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ShiftPopUp.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Done/ShiftPopUp.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -507,18 +577,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.test" />
-      <item index="1" class="java.lang.String" itemvalue="Python.EmployeePopUp" />
-      <item index="2" class="java.lang.String" itemvalue="Python.Employees" />
-      <item index="3" class="java.lang.String" itemvalue="Python.ShiftPopUp" />
-      <item index="4" class="java.lang.String" itemvalue="Python.DataV3" />
+      <item index="1" class="java.lang.String" itemvalue="Python.ShiftPopUp" />
+      <item index="2" class="java.lang.String" itemvalue="Python.Launch Rota" />
+      <item index="3" class="java.lang.String" itemvalue="Python.DBData" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Core" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.DataV3" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.ShiftPopUp" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Employees" />
-        <item index="4" class="java.lang.String" itemvalue="Python.EmployeePopUp" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Launch Rota" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Core" />
+        <item index="2" class="java.lang.String" itemvalue="Python.DBData" />
+        <item index="3" class="java.lang.String" itemvalue="Python.test" />
+        <item index="4" class="java.lang.String" itemvalue="Python.ShiftPopUp" />
       </list>
     </recent_temporary>
   </component>
@@ -557,7 +627,14 @@
       <option name="project" value="LOCAL" />
       <updated>1547247364121</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="-Moved two one wage calc module in reporting">
+      <created>1547901667436</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1547901667436</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -570,28 +647,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="401" y="16" width="1602" height="873" extended-state="6" />
+    <frame x="0" y="86" width="1602" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32642487" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41009057" sideWeight="0.395" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901555" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3260026" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30829015" sideWeight="0.605" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3134715" sideWeight="0.453125" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="669" y="198" width="261" height="476" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.294375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="669" y="198" width="261" height="476" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32642487" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32512954" sideWeight="0.485" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3134715" sideWeight="0.610625" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3134715" sideWeight="0.389375" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901555" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3260026" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24967907" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3134715" sideWeight="0.450625" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3523316" sideWeight="0.4975" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4074074" sideWeight="0.4975" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901555" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32512954" sideWeight="0.4525" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -606,6 +683,13 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/GUIs.py</url>
+          <line>548</line>
+          <option name="timeStamp" value="394" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
@@ -616,213 +700,20 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="18" />
+      <option name="time" value="395" />
     </breakpoint-manager>
     <watches-manager />
   </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>rotaDate</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DBUpdate.py" />
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-1247972723/PyQt4/QtGui/QMainWindow.py" />
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-1247972723/PyQt4/QtGui/QTableView.py" />
-    <entry file="file://$PROJECT_DIR$/AddEmployeeWindow.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="25" column="80" lean-forward="false" selection-start-line="25" selection-start-column="80" selection-end-line="25" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rotav6.py" />
-    <entry file="file://$PROJECT_DIR$/ShiftPopUpWindow.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-480">
-          <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TimePad.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="23" lean-forward="true" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/python2.7/dist-packages/PyQt4/uic/Compiler/qtproxies.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-33">
-          <caret line="389" column="10" lean-forward="false" selection-start-line="389" selection-start-column="10" selection-end-line="389" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/python2.7/calendar.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1695">
-          <caret line="115" column="4" lean-forward="false" selection-start-line="115" selection-start-column="4" selection-end-line="115" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib64/python3.5/site-packages/pip-9.0.1-py3.5.egg/pip/locations.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="66" column="6" lean-forward="false" selection-start-line="66" selection-start-column="6" selection-end-line="66" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib64/python3.5/site-packages/pip-9.0.1-py3.5.egg/pip/index.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="749">
-          <caret line="192" column="12" lean-forward="false" selection-start-line="192" selection-start-column="12" selection-end-line="192" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib64/python3.5/site-packages/pip-9.0.1-py3.5.egg/pip/wheel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1676">
-          <caret line="647" column="37" lean-forward="false" selection-start-line="647" selection-start-column="37" selection-end-line="647" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/actRevUI.py" />
-    <entry file="file://$PROJECT_DIR$/TimePadPopUp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AddEmployeeUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="54" column="58" lean-forward="false" selection-start-line="54" selection-start-column="58" selection-end-line="54" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BusyIndicator.py" />
-    <entry file="file://$PROJECT_DIR$/profile_test.py" />
-    <entry file="file://$PROJECT_DIR$/profile_test.py.lprof" />
-    <entry file="file://$PROJECT_DIR$/script_to_profile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/progressBar.py" />
-    <entry file="file://$PROJECT_DIR$/README">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="27" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/salary.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reportWindow.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-30">
-          <caret line="28" column="52" lean-forward="false" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rotav7.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1470">
-          <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WidgetTools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2970">
-          <caret line="200" column="25" lean-forward="false" selection-start-line="200" selection-start-column="25" selection-end-line="200" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LogMeIn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="43" column="52" lean-forward="false" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Printing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/python2.7/compiler/ast.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="1054" column="6" lean-forward="false" selection-start-line="1054" selection-start-column="6" selection-end-line="1054" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/libfuturize/fixes/fix_print.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/Cython/Debugger/libcython.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="1105" column="6" lean-forward="false" selection-start-line="1105" selection-start-column="6" selection-end-line="1105" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/python2.7/lib2to3/fixes/fix_print.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/python2.7/dist-packages/gtk-2.0/gtk/keysyms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-1247972723/__builtin__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="440" column="4" lean-forward="false" selection-start-line="440" selection-start-column="4" selection-end-line="440" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/six.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="722" column="8" lean-forward="false" selection-start-line="722" selection-start-column="8" selection-end-line="722" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
@@ -831,96 +722,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/EmployeeInfoEntry.py" />
-    <entry file="file://$PROJECT_DIR$/RotaData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="149" column="12" lean-forward="true" selection-start-line="149" selection-start-column="12" selection-end-line="149" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ShiftPopUp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="704" column="65" lean-forward="false" selection-start-line="704" selection-start-column="65" selection-end-line="704" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="13" column="9" lean-forward="false" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/payrollVariablePopUP.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="52" lean-forward="false" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Employees.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7110">
-          <caret line="482" column="44" lean-forward="false" selection-start-line="482" selection-start-column="44" selection-end-line="482" selection-end-column="44" />
-          <folding>
-            <element signature="e#18#33#0" expanded="true" />
-            <marker date="1547509679630" expanded="true" signature="19885:19891" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EmployeeinfoEntry.py">
+    <entry file="file://$PROJECT_DIR$/QtUis/EmployeeinfoEntry.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="90" column="59" lean-forward="false" selection-start-line="90" selection-start-column="59" selection-end-line="90" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EmployeePopUp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="154" column="31" lean-forward="false" selection-start-line="154" selection-start-column="31" selection-end-line="154" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ActualRevWindow.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1410">
-          <caret line="100" column="14" lean-forward="false" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="1071" column="0" lean-forward="false" selection-start-line="1071" selection-start-column="0" selection-end-line="1071" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reporting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2775">
-          <caret line="195" column="0" lean-forward="false" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-            <marker date="1547846514621" expanded="true" signature="1912:2324" ph="..." />
-            <marker date="1547846514621" expanded="true" signature="2421:14690" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1515">
-          <caret line="102" column="8" lean-forward="false" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -932,12 +737,242 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RotaWindow.py">
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-1247972723/sys.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="377" column="9" lean-forward="false" selection-start-line="377" selection-start-column="9" selection-end-line="377" selection-end-column="9" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-1247972723/PyQt4/QtCore/QMetaObject.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QtUis/Rotav7.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="952" column="34" lean-forward="false" selection-start-line="952" selection-start-column="27" selection-end-line="952" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tab.py" />
+    <entry file="file://$PROJECT_DIR$/test.py" />
+    <entry file="file://$PROJECT_DIR$/QtUis/reportWindow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="33" column="71" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UIs/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/venv/Login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script_to_profile.py.lprof" />
+    <entry file="file://$PROJECT_DIR$/Documents/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1470">
+          <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QtUis/actualRevWindowUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-225">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Done/ActualRevWindow.py" />
+    <entry file="file://$PROJECT_DIR$/Done/AddEmployeeWindow.py" />
+    <entry file="file://$PROJECT_DIR$/Done/EmployeePopUp.py" />
+    <entry file="file://$PROJECT_DIR$/payrollVariables.py" />
+    <entry file="file://$PROJECT_DIR$/Done/Printing.py" />
+    <entry file="file://$PROJECT_DIR$/Core.py" />
+    <entry file="file://$PROJECT_DIR$/Done/RotaData.py" />
+    <entry file="file://$PROJECT_DIR$/Done/reporting.py" />
+    <entry file="file://$PROJECT_DIR$/Done/TimePadPopUp.py" />
+    <entry file="file://$PROJECT_DIR$/Done/ShiftPopUp.py" />
+    <entry file="file://$PROJECT_DIR$/Done/salary.py" />
+    <entry file="file://$PROJECT_DIR$/Main.py" />
+    <entry file="file://$PROJECT_DIR$/Rota.py" />
+    <entry file="file://$PROJECT_DIR$/Done/Employees.py" />
+    <entry file="file://$PROJECT_DIR$/Done/LogMeIn.py" />
+    <entry file="file://$PROJECT_DIR$/DBAccess.py" />
+    <entry file="file://$PROJECT_DIR$/Done/payrollVariablePopUP.py" />
+    <entry file="file://$PROJECT_DIR$/QtUis/payrollVariablesUI.py" />
+    <entry file="file://$PROJECT_DIR$/QtUis/payrollVariableUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/dot.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/left.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Documents/README">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="70" lean-forward="false" selection-start-line="29" selection-start-column="70" selection-end-line="29" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images.qrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WidgetTools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8460">
+          <caret line="566" column="8" lean-forward="false" selection-start-line="566" selection-start-column="8" selection-end-line="566" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-1247972723/datetime.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="103" column="8" lean-forward="false" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RotaMain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="1667" column="0" lean-forward="false" selection-start-line="1667" selection-start-column="0" selection-end-line="1667" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/MySQLdb/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/MySQLdb/connections.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="159" column="0" lean-forward="false" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python2.7/dist-packages/dateutil/relativedelta.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4080">
+          <caret line="275" column="0" lean-forward="false" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/splash.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="633" column="0" lean-forward="false" selection-start-line="633" selection-start-column="0" selection-end-line="633" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUIs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="2425" column="0" lean-forward="false" selection-start-line="2425" selection-start-column="0" selection-end-line="2425" selection-end-column="0" />
           <folding>
-            <element signature="e#21#36#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#1619#4134#0" expanded="false" />
+            <element signature="e#4184#5016#0" expanded="false" />
+            <element signature="e#5066#5724#0" expanded="false" />
+            <element signature="e#5939#6408#0" expanded="false" />
+            <element signature="e#6446#6503#0" expanded="false" />
+            <element signature="e#6549#6627#0" expanded="false" />
+            <element signature="e#6673#6746#0" expanded="false" />
+            <element signature="e#6797#6897#0" expanded="false" />
+            <element signature="e#6940#8755#0" expanded="false" />
+            <element signature="e#8804#9228#0" expanded="false" />
+            <element signature="e#9281#9363#0" expanded="false" />
+            <element signature="e#9543#10665#0" expanded="false" />
+            <element signature="e#10716#10966#0" expanded="false" />
+            <element signature="e#11004#11102#0" expanded="false" />
+            <element signature="e#11140#11239#0" expanded="false" />
+            <element signature="e#11284#12641#0" expanded="false" />
+            <element signature="e#12690#13102#0" expanded="false" />
+            <element signature="e#13148#13347#0" expanded="false" />
+            <element signature="e#13391#13824#0" expanded="false" />
+            <element signature="e#13872#14700#0" expanded="false" />
+            <element signature="e#14757#14841#0" expanded="false" />
+            <element signature="e#14901#16962#0" expanded="false" />
+            <element signature="e#17012#19200#0" expanded="false" />
+            <element signature="e#19244#19362#0" expanded="false" />
+            <element signature="e#19412#19716#0" expanded="false" />
+            <element signature="e#19763#20000#0" expanded="false" />
+            <element signature="e#20043#20118#0" expanded="false" />
+            <element signature="e#20158#20991#0" expanded="false" />
+            <element signature="e#21046#21265#0" expanded="false" />
+            <element signature="e#21315#24191#0" expanded="false" />
+            <element signature="e#24238#24834#0" expanded="false" />
+            <element signature="e#27403#27672#0" expanded="false" />
+            <element signature="e#27705#28209#0" expanded="false" />
+            <element signature="e#28244#30512#0" expanded="false" />
+            <element signature="e#30549#31119#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-495">
+          <caret line="427" column="24" lean-forward="true" selection-start-line="427" selection-start-column="24" selection-end-line="427" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#65334#65571#0" expanded="false" />
+            <element signature="e#66455#66692#0" expanded="false" />
           </folding>
         </state>
       </provider>
