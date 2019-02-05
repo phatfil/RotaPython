@@ -6,59 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="732f080e-e850-4105-ab94-043bb3bbd996" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Core.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/GUIs.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/QtUis/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images.qrc" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/Documents/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/phil.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/phil.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/ActualRevWindow.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AddEmployeeUI.py" afterPath="$PROJECT_DIR$/QtUis/AddEmployeeWindowUI.py" />
-      <change beforePath="$PROJECT_DIR$/AddEmployeeUI.ui" afterPath="$PROJECT_DIR$/QtUis/AddEmployeeWindowUI.ui" />
-      <change beforePath="$PROJECT_DIR$/AddEmployeeWindow.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DB.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/EmployeeInfoEntry.ui" afterPath="$PROJECT_DIR$/QtUis/EmployeeInfoEntry.ui" />
-      <change beforePath="$PROJECT_DIR$/EmployeePopUp.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/EmployeeinfoEntry.py" afterPath="$PROJECT_DIR$/QtUis/EmployeeinfoEntry.py" />
-      <change beforePath="$PROJECT_DIR$/Employees.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Lleft.png" afterPath="$PROJECT_DIR$/images/Lleft.png" />
-      <change beforePath="$PROJECT_DIR$/LogMeIn.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Printing.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/README" afterPath="$PROJECT_DIR$/Documents/README" />
-      <change beforePath="$PROJECT_DIR$/RotaData.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RotaWindow.py" afterPath="$PROJECT_DIR$/RotaMain.py" />
-      <change beforePath="$PROJECT_DIR$/Rotav7.py" afterPath="$PROJECT_DIR$/QtUis/Rotav7.py" />
-      <change beforePath="$PROJECT_DIR$/Rotav7.ui" afterPath="$PROJECT_DIR$/QtUis/Rotav7.ui" />
-      <change beforePath="$PROJECT_DIR$/Rright.png" afterPath="$PROJECT_DIR$/images/Rright.png" />
-      <change beforePath="$PROJECT_DIR$/ShiftPopUp.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ShiftPopUpWindow.py" afterPath="$PROJECT_DIR$/QtUis/ShiftPopUpWindow.py" />
-      <change beforePath="$PROJECT_DIR$/ShiftPopUpWindow.ui" afterPath="$PROJECT_DIR$/QtUis/ShiftPopUpWindow.ui" />
-      <change beforePath="$PROJECT_DIR$/TimePad.py" afterPath="$PROJECT_DIR$/QtUis/TimePad.py" />
-      <change beforePath="$PROJECT_DIR$/TimePad.ui" afterPath="$PROJECT_DIR$/QtUis/TimePad.ui" />
-      <change beforePath="$PROJECT_DIR$/TimePadPopUp.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/actualRevUI.py" afterPath="$PROJECT_DIR$/QtUis/actualRevWindowUI.py" />
-      <change beforePath="$PROJECT_DIR$/actualRevUI.ui" afterPath="$PROJECT_DIR$/QtUis/actualRevWindowUI.ui" />
-      <change beforePath="$PROJECT_DIR$/dot.png" afterPath="$PROJECT_DIR$/images/dot.png" />
-      <change beforePath="$PROJECT_DIR$/left.png" afterPath="$PROJECT_DIR$/images/left.png" />
-      <change beforePath="$PROJECT_DIR$/loginwindow.py" afterPath="$PROJECT_DIR$/QtUis/loginwindow.py" />
-      <change beforePath="$PROJECT_DIR$/loginwindow.ui" afterPath="$PROJECT_DIR$/QtUis/loginwindow.ui" />
-      <change beforePath="$PROJECT_DIR$/payrollVariablePopUP.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/payrollVariableUI.py" afterPath="$PROJECT_DIR$/QtUis/payrollVariableUI.py" />
-      <change beforePath="$PROJECT_DIR$/payrollVariableUI.ui" afterPath="$PROJECT_DIR$/QtUis/payrollVariableUI.ui" />
-      <change beforePath="$PROJECT_DIR$/payrollVariables.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/payrollVariablesUI.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/print.pdf" afterPath="$PROJECT_DIR$/Documents/print.pdf" />
-      <change beforePath="$PROJECT_DIR$/removedBudgetForm.ui" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/reportWindow.py" afterPath="$PROJECT_DIR$/QtUis/reportWindow.py" />
-      <change beforePath="$PROJECT_DIR$/reportWindow.ui" afterPath="$PROJECT_DIR$/QtUis/reportWindow.ui" />
-      <change beforePath="$PROJECT_DIR$/reporting.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/right.png" afterPath="$PROJECT_DIR$/images/right.png" />
-      <change beforePath="$PROJECT_DIR$/salary.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/script_to_profile.py" afterPath="$PROJECT_DIR$/DBData.py" />
-      <change beforePath="$PROJECT_DIR$/script_to_profile.py.lprof" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test.py" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -157,11 +105,11 @@
         <entry file="file://$PROJECT_DIR$/Core.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-495">
-              <caret line="427" column="24" lean-forward="true" selection-start-line="427" selection-start-column="24" selection-end-line="427" selection-end-column="24" />
+              <caret line="431" column="24" lean-forward="true" selection-start-line="431" selection-start-column="24" selection-end-line="431" selection-end-column="24" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
-                <element signature="e#65334#65571#0" expanded="false" />
-                <element signature="e#66455#66692#0" expanded="false" />
+                <element signature="e#65348#65585#0" expanded="false" />
+                <element signature="e#66469#66706#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -173,42 +121,41 @@
             <state relative-caret-position="105">
               <caret line="2425" column="0" lean-forward="false" selection-start-line="2425" selection-start-column="0" selection-end-line="2425" selection-end-column="0" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
-                <element signature="e#1619#4134#0" expanded="false" />
-                <element signature="e#4184#5016#0" expanded="false" />
-                <element signature="e#5066#5724#0" expanded="false" />
-                <element signature="e#5939#6408#0" expanded="false" />
-                <element signature="e#6446#6503#0" expanded="false" />
-                <element signature="e#6549#6627#0" expanded="false" />
-                <element signature="e#6673#6746#0" expanded="false" />
-                <element signature="e#6797#6897#0" expanded="false" />
-                <element signature="e#6940#8755#0" expanded="false" />
-                <element signature="e#8804#9228#0" expanded="false" />
-                <element signature="e#9281#9363#0" expanded="false" />
-                <element signature="e#9543#10665#0" expanded="false" />
-                <element signature="e#10716#10966#0" expanded="false" />
-                <element signature="e#11004#11102#0" expanded="false" />
-                <element signature="e#11140#11239#0" expanded="false" />
-                <element signature="e#11284#12641#0" expanded="false" />
-                <element signature="e#12690#13102#0" expanded="false" />
-                <element signature="e#13148#13347#0" expanded="false" />
-                <element signature="e#13391#13824#0" expanded="false" />
-                <element signature="e#13872#14700#0" expanded="false" />
-                <element signature="e#14757#14841#0" expanded="false" />
-                <element signature="e#14901#16962#0" expanded="false" />
-                <element signature="e#17012#19200#0" expanded="false" />
-                <element signature="e#19244#19362#0" expanded="false" />
-                <element signature="e#19412#19716#0" expanded="false" />
-                <element signature="e#19763#20000#0" expanded="false" />
-                <element signature="e#20043#20118#0" expanded="false" />
-                <element signature="e#20158#20991#0" expanded="false" />
-                <element signature="e#21046#21265#0" expanded="false" />
-                <element signature="e#21315#24191#0" expanded="false" />
-                <element signature="e#24238#24834#0" expanded="false" />
-                <element signature="e#27403#27672#0" expanded="false" />
-                <element signature="e#27705#28209#0" expanded="false" />
-                <element signature="e#28244#30512#0" expanded="false" />
-                <element signature="e#30549#31119#0" expanded="false" />
+                <element signature="e#1540#4055#0" expanded="false" />
+                <element signature="e#4105#4937#0" expanded="false" />
+                <element signature="e#4987#5645#0" expanded="false" />
+                <element signature="e#5860#6329#0" expanded="false" />
+                <element signature="e#6367#6424#0" expanded="false" />
+                <element signature="e#6470#6548#0" expanded="false" />
+                <element signature="e#6594#6667#0" expanded="false" />
+                <element signature="e#6718#6818#0" expanded="false" />
+                <element signature="e#6861#8676#0" expanded="false" />
+                <element signature="e#8725#9149#0" expanded="false" />
+                <element signature="e#9202#9284#0" expanded="false" />
+                <element signature="e#9464#10586#0" expanded="false" />
+                <element signature="e#10637#10887#0" expanded="false" />
+                <element signature="e#10925#11023#0" expanded="false" />
+                <element signature="e#11061#11160#0" expanded="false" />
+                <element signature="e#11205#12562#0" expanded="false" />
+                <element signature="e#12611#13023#0" expanded="false" />
+                <element signature="e#13069#13268#0" expanded="false" />
+                <element signature="e#13312#13745#0" expanded="false" />
+                <element signature="e#13793#14621#0" expanded="false" />
+                <element signature="e#14678#14762#0" expanded="false" />
+                <element signature="e#14822#16883#0" expanded="false" />
+                <element signature="e#16933#19121#0" expanded="false" />
+                <element signature="e#19165#19283#0" expanded="false" />
+                <element signature="e#19333#19637#0" expanded="false" />
+                <element signature="e#19684#19921#0" expanded="false" />
+                <element signature="e#19964#20039#0" expanded="false" />
+                <element signature="e#20079#20912#0" expanded="false" />
+                <element signature="e#20967#21186#0" expanded="false" />
+                <element signature="e#21236#24112#0" expanded="false" />
+                <element signature="e#24159#24755#0" expanded="false" />
+                <element signature="e#27324#27593#0" expanded="false" />
+                <element signature="e#27626#28130#0" expanded="false" />
+                <element signature="e#28165#30433#0" expanded="false" />
+                <element signature="e#30470#31040#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -346,8 +293,8 @@
         <option value="$PROJECT_DIR$/Documents/README" />
         <option value="$PROJECT_DIR$/images.qrc" />
         <option value="$PROJECT_DIR$/DBData.py" />
-        <option value="$PROJECT_DIR$/Core.py" />
         <option value="$PROJECT_DIR$/GUIs.py" />
+        <option value="$PROJECT_DIR$/Core.py" />
       </list>
     </option>
   </component>
@@ -634,7 +581,14 @@
       <option name="project" value="LOCAL" />
       <updated>1547901667436</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="- Total structure rework">
+      <created>1549381774854</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1549381774855</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -676,10 +630,14 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="test push" />
     <MESSAGE value="- sick pay calc started&#10;- Working days input added" />
     <MESSAGE value="-Moved two one wage calc module in reporting" />
-    <option name="LAST_COMMIT_MESSAGE" value="-Moved two one wage calc module in reporting" />
+    <MESSAGE value="- Total structure rework" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Total structure rework" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -925,42 +883,41 @@
         <state relative-caret-position="105">
           <caret line="2425" column="0" lean-forward="false" selection-start-line="2425" selection-start-column="0" selection-end-line="2425" selection-end-column="0" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <element signature="e#1619#4134#0" expanded="false" />
-            <element signature="e#4184#5016#0" expanded="false" />
-            <element signature="e#5066#5724#0" expanded="false" />
-            <element signature="e#5939#6408#0" expanded="false" />
-            <element signature="e#6446#6503#0" expanded="false" />
-            <element signature="e#6549#6627#0" expanded="false" />
-            <element signature="e#6673#6746#0" expanded="false" />
-            <element signature="e#6797#6897#0" expanded="false" />
-            <element signature="e#6940#8755#0" expanded="false" />
-            <element signature="e#8804#9228#0" expanded="false" />
-            <element signature="e#9281#9363#0" expanded="false" />
-            <element signature="e#9543#10665#0" expanded="false" />
-            <element signature="e#10716#10966#0" expanded="false" />
-            <element signature="e#11004#11102#0" expanded="false" />
-            <element signature="e#11140#11239#0" expanded="false" />
-            <element signature="e#11284#12641#0" expanded="false" />
-            <element signature="e#12690#13102#0" expanded="false" />
-            <element signature="e#13148#13347#0" expanded="false" />
-            <element signature="e#13391#13824#0" expanded="false" />
-            <element signature="e#13872#14700#0" expanded="false" />
-            <element signature="e#14757#14841#0" expanded="false" />
-            <element signature="e#14901#16962#0" expanded="false" />
-            <element signature="e#17012#19200#0" expanded="false" />
-            <element signature="e#19244#19362#0" expanded="false" />
-            <element signature="e#19412#19716#0" expanded="false" />
-            <element signature="e#19763#20000#0" expanded="false" />
-            <element signature="e#20043#20118#0" expanded="false" />
-            <element signature="e#20158#20991#0" expanded="false" />
-            <element signature="e#21046#21265#0" expanded="false" />
-            <element signature="e#21315#24191#0" expanded="false" />
-            <element signature="e#24238#24834#0" expanded="false" />
-            <element signature="e#27403#27672#0" expanded="false" />
-            <element signature="e#27705#28209#0" expanded="false" />
-            <element signature="e#28244#30512#0" expanded="false" />
-            <element signature="e#30549#31119#0" expanded="false" />
+            <element signature="e#1540#4055#0" expanded="false" />
+            <element signature="e#4105#4937#0" expanded="false" />
+            <element signature="e#4987#5645#0" expanded="false" />
+            <element signature="e#5860#6329#0" expanded="false" />
+            <element signature="e#6367#6424#0" expanded="false" />
+            <element signature="e#6470#6548#0" expanded="false" />
+            <element signature="e#6594#6667#0" expanded="false" />
+            <element signature="e#6718#6818#0" expanded="false" />
+            <element signature="e#6861#8676#0" expanded="false" />
+            <element signature="e#8725#9149#0" expanded="false" />
+            <element signature="e#9202#9284#0" expanded="false" />
+            <element signature="e#9464#10586#0" expanded="false" />
+            <element signature="e#10637#10887#0" expanded="false" />
+            <element signature="e#10925#11023#0" expanded="false" />
+            <element signature="e#11061#11160#0" expanded="false" />
+            <element signature="e#11205#12562#0" expanded="false" />
+            <element signature="e#12611#13023#0" expanded="false" />
+            <element signature="e#13069#13268#0" expanded="false" />
+            <element signature="e#13312#13745#0" expanded="false" />
+            <element signature="e#13793#14621#0" expanded="false" />
+            <element signature="e#14678#14762#0" expanded="false" />
+            <element signature="e#14822#16883#0" expanded="false" />
+            <element signature="e#16933#19121#0" expanded="false" />
+            <element signature="e#19165#19283#0" expanded="false" />
+            <element signature="e#19333#19637#0" expanded="false" />
+            <element signature="e#19684#19921#0" expanded="false" />
+            <element signature="e#19964#20039#0" expanded="false" />
+            <element signature="e#20079#20912#0" expanded="false" />
+            <element signature="e#20967#21186#0" expanded="false" />
+            <element signature="e#21236#24112#0" expanded="false" />
+            <element signature="e#24159#24755#0" expanded="false" />
+            <element signature="e#27324#27593#0" expanded="false" />
+            <element signature="e#27626#28130#0" expanded="false" />
+            <element signature="e#28165#30433#0" expanded="false" />
+            <element signature="e#30470#31040#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -968,11 +925,11 @@
     <entry file="file://$PROJECT_DIR$/Core.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-495">
-          <caret line="427" column="24" lean-forward="true" selection-start-line="427" selection-start-column="24" selection-end-line="427" selection-end-column="24" />
+          <caret line="431" column="24" lean-forward="true" selection-start-line="431" selection-start-column="24" selection-end-line="431" selection-end-column="24" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-            <element signature="e#65334#65571#0" expanded="false" />
-            <element signature="e#66455#66692#0" expanded="false" />
+            <element signature="e#65348#65585#0" expanded="false" />
+            <element signature="e#66469#66706#0" expanded="false" />
           </folding>
         </state>
       </provider>
